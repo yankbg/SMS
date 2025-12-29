@@ -8,8 +8,8 @@ import img1 from "../assets/image1.jpg";
 import img2 from "../assets/image2.jpeg";
 import img3 from "../assets/image3.jpeg";
 import arrow from "../assets/arrowwhite.png";
-import play_icon from "../assets/playwhite.png";
-import pause_icon from "../assets/pausewhite.png";
+import play_icon from "../assets/play-button.png";
+import pause_icon from "../assets/pause.png";
 
 const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStatus}) => {
     return(
