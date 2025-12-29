@@ -2,13 +2,14 @@ import { Link } from 'react-router-dom'
 import React, {useEffect} from "react";
 import {useState} from "react";
 import "./style.css";
+import Navbar from "../component/Navbar.jsx";
 import smsLgo from "../assets/logo.jpeg";
 import video1 from "../assets/video1.mp4";
 import img1 from "../assets/image1.jpg";
 import img2 from "../assets/image2.jpeg";
 import img3 from "../assets/image3.jpeg";
 import arrow from "../assets/arrowwhite.png";
-import play_icon from "../assets/play-button.png";
+import play_icon from "../assets/roundplay.png";
 import pause_icon from "../assets/pause.png";
 
 const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStatus}) => {
@@ -36,22 +37,11 @@ const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStat
         </div>
     );
 }
-const Navbar = () => {
-    return (
-        <div className="navbar">
-            <div className="nav-logo">
-                <img src={smsLgo}  className="nav-logo-pic" alt="SMS Logo"/>
-            </div>
-            <ul className="nav-menu">
-                <li className="nav-item"><Link to="/">Accueil</Link></li>
-                <li className="nav-item"><Link to="/a-propos">À propos</Link></li>
-                <li className="nav-item"><Link to="/projets">Projets</Link></li>
-                <li className="nav-item"><Link to="/contact">Contact</Link></li>
-
-            </ul>
-        </div>
-    );
-}
+// const Navbar = () => {
+//     return (
+//
+//     );
+// }
 const Objectif = () => {
     return (
         <section id="objectifs" className="objectifs">
@@ -293,13 +283,13 @@ const Background = ({playStatus, heroCount}) => {
             </video>
         )
     } else if (heroCount === 0) {
-        return <img src={img1} alt="" className="background fadein" alt=""/>
+        return <img src={img1}  className="background fadein" alt="image1"/>
 
     } else if (heroCount === 1) {
-        return <img src={img2} alt="" className="background fadein" alt=""/>
+        return <img src={img2}  className="background fadein" alt="image2"/>
 
     } else if (heroCount === 2) {
-        return <img src={img3} alt="" className="background fadein" alt=""/>
+        return <img src={img3} className="background fadein" alt="image 3"/>
 
     }
 }

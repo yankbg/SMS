@@ -152,13 +152,13 @@ width: 70px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #5F6C7BFF;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .hero-dot.green {
-    background-color: rgba(250, 147, 75, 0.68);
+    background-color: rgba(244, 134, 46, 0.72);
 }
 
 .hero-play {
@@ -334,4 +334,8 @@ width: 70px;
     .objectif-card{
         padding: 1.5rem;
     }
+}
+/*--------------  A PROPOS PAGE DESIGN ------------------*/
+.main-apropos{
+    margin-top: 100px;
 }
