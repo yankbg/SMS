@@ -205,7 +205,7 @@ const Apropos = () => {
                 {/* Title Section */}
                 <div className="title-apropos">
                     <div className="text-center mb-20 ">
-                        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full text-sm font-semibold mb-6 shadow-lg ">
+                        <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full text-sm font-semibold mb-6 shadow-lg ">
                             <svg className="w-5 h-5 mr-2 svg-fondee" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                             </svg>
@@ -223,9 +223,9 @@ const Apropos = () => {
 
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-10">
-                    <StatCard number="12+" label="Experts" icon="👷" color="from-emerald-500 to-green-600" />
-                    <StatCard number="6+" label="Engins TP" icon="🚜" color="from-blue-500 to-indigo-600" />
-                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="from-purple-500 to-pink-600" />
+                    <StatCard number="12+" label="Experts" icon="👷" color="from-orange-400 via-orange-300 to-orange-600" />
+                    <StatCard number="6+" label="Engins TP" icon="🚜" color="from-orange-700 to-blue-700" />
+                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="from-blue-500 to-indigo-700" />
                 </div>
 
                 {/* CTA */}

@@ -94,7 +94,7 @@ width: 70px;
     margin: 0;
     font-weight: 600;
     font-size: 2rem;
-    color: rgb(26, 26, 26);
+    color: #101828;
 }
 
 .text2 {
@@ -174,7 +174,7 @@ width: 70px;
 }
 
 .hero-play p {
-    color: #5f6c7b;
+    color: #101828;
     font-size: 18px;
     font-weight: 500;
 }
@@ -202,7 +202,7 @@ width: 70px;
     background: #f8fafc;
     padding: 2rem;
     border-radius: 15px;
-    border-left: 5px solid #1e40af;
+    border-left: 5px solid #101828;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -218,7 +218,7 @@ width: 70px;
 .objectif-card h3{
     font-size: 1.3rem;
     font-weight: 600;
-    color: #1e40af;
+    color: #101828;
     margin-bottom: 1rem;
 }
 .objectif-card p{
@@ -234,8 +234,8 @@ width: 70px;
     color: #1e40af;
 }
 /*APropos section*/
-.apropos{
-
+.subtitle-apropos{
+    padding: 0 0.5rem;
 }
 .flex-apropos{
     width: 100%;
@@ -338,4 +338,57 @@ width: 70px;
 /*--------------  A PROPOS PAGE DESIGN ------------------*/
 .main-apropos{
     margin-top: 100px;
+}
+.section-hero{
+    padding: 20px 0;
+}
+.container-hero-apropos{
+    margin: 0 auto;
+    background-color: #1A1A1A;
+}
+.mission-title{
+    padding: 0.3rem 1rem;
+}
+.left-grid{
+    margin-top: 10px;
+}
+.equipe-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.equipe-number{
+    margin-right: 1rem;
+}
+.reference-apropos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.reference-item {
+    padding: 0.1rem 1rem;
+}
+.card1{
+    border-radius: 1rem 2rem;
+    padding: 0.3rem 1rem;
+}
+
+.icon-materiel, .icon-title-card, .span-cta{
+    margin-right: 1rem;
+}
+.materiel-section{
+    margin-top: 2rem;
+}
+.card-materiel{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.materiel-section h3, .materiel-section h2, .cta-projet,.reference-title h2, .reference-title p{
+    margin: 1rem;
+}
+.cta-projet01{
+    padding: 0 1rem;
 }
