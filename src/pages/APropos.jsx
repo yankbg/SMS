@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from "../component/Navbar.jsx";
+import Footer from "../component/Footer.jsx";
 import './style.css'
 
 export default function APropos() {
@@ -15,7 +16,7 @@ export default function APropos() {
         </div>
     )
 
-    const Home = () => {
+    const AProposContent = () => {
         return (
             <div className="main-apropos min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
                 {/* Hero À Propos */}
@@ -123,7 +124,7 @@ export default function APropos() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold text-lg mb-1">Environmentaliste</h4>
-                                            <p className="text-gray-600">Conception innovante et esthétique</p>
+                                            <p className="text-gray-600">Études d'impact</p>
                                         </div>
                                     </div>
                                     <div
@@ -133,7 +134,7 @@ export default function APropos() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold text-lg mb-1">Ingénieurs Géotechnicien</h4>
-                                            <p className="text-gray-600">Expertise BTP reconnue</p>
+                                            <p className="text-gray-600">Études de sol</p>
                                         </div>
                                     </div>
                                     <div
@@ -143,7 +144,7 @@ export default function APropos() {
                                         </div>
                                         <div>
                                             <h4 className="font-semibold text-lg mb-1">Ingénieurs Electriciens</h4>
-                                            <p className="text-gray-600">Conception innovante et esthétique</p>
+                                            <p className="text-gray-600">Installations électriques</p>
                                         </div>
                                     </div>
                                     <div
@@ -154,7 +155,7 @@ export default function APropos() {
                                         <div>
                                             <h4 className="font-semibold text-lg mb-1">Ingénieurs Electro
                                                 mécanicien</h4>
-                                            <p className="text-gray-600">Expertise BTP reconnue</p>
+                                            <p className="text-gray-600">Maintenance équipements</p>
                                         </div>
                                     </div>
                                 </div>
@@ -236,6 +237,8 @@ export default function APropos() {
                                             <EquipmentCard icon="🚜" title="2 Excavatrices" desc="Creusement & terrassement" />
                                             <EquipmentCard icon="🛡️" title="1 Chargeur" desc="Manutention matériaux" />
                                             <EquipmentCard icon="🚛" title="4 Camions" desc="Transport matériaux" />
+                                            <EquipmentCard icon="📏" title="2 Cyclomètres" desc="Mesures topographiques" />
+                                            <EquipmentCard icon="📐" title="1 Niveau automatique" desc="Nivellement précis" />
                                             <EquipmentCard icon="🚧" title="1 Niveleuse" desc="Nivellement routes" />
                                             <EquipmentCard icon="🔨" title="1 Compacteur" desc="Compactage sols" />
                                         </div>
@@ -277,6 +280,10 @@ export default function APropos() {
                                             <div className="text-4xl mb-3">🚙</div>
                                             <h4 className="font-bold text-lg mb-2">1 Suzuki</h4>
                                         </div>
+                                        <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
+                                            <div className="text-4xl mb-3">🛻</div>  {/* Land Cruiser */}
+                                            <h4 className="font-bold text-lg mb-2">1 GX Land Cruiser Toyota</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +308,8 @@ export default function APropos() {
     return (
         <div>
             <Navbar/>
-            <Home/>
+            <AProposContent/>
+            <Footer/>
         </div>
     );
 }
