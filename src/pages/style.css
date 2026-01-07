@@ -53,7 +53,7 @@ width: 70px;
     gap: 40px;
     margin: 0;
     padding: 0;
-    /*color: #000000;*/
+    /*color: #0403fb;*/
 }
 
 /* Menu items */
@@ -317,6 +317,7 @@ width: 70px;
    .navbar{
        justify-content: center;
    }
+
    .hero-section{
        margin: 0 10px;
        margin-top: 200px;
@@ -392,3 +393,60 @@ width: 70px;
 .cta-projet01{
     padding: 0 1rem;
 }
+/*--------------------------------------------NOS SERVICES----------------------------------*/
+.main-services{
+    margin-top: 100px;
+}
+.hero-text-services{
+    justify-self: center;
+}
+.titre-service, .modele-title{
+    padding: 0 1rem;
+}
+.service-card{
+    padding: 1.5rem;
+}
+.service-card h3, .modele-card h3{
+    margin: 0.5rem;
+}
+.service-card p{
+    margin-bottom: 0.5rem;
+}
+.service-cta{
+    margin-top: 1rem;
+}
+.hero-section-service{
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+.titre-service-complementaire{
+    margin: 2rem;
+}
+.titre-service-complementaire p{
+    margin-top: 0.5rem;
+}
+.service-details{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.modele-section{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.modele-top h2{
+    margin: 1rem;
+}
+.modele-top{
+    margin-bottom: 2rem;
+}
+.modele-card{
+    padding: 1rem;
+}
+.card-svg-services{
+    background-color: #0403fb;
+}
+.section-complementaire{
+    padding-top: 1rem;
+}
+

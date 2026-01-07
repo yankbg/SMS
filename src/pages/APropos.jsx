@@ -28,7 +28,7 @@ export default function APropos() {
                                 À Propos
                             </h1>
                             <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed">
-                                Société Multi Services <span className="font-bold bg-gradient-to-r from-orange-400 via-orange-200 to-orange-700 bg-clip-text text-transparent">SMS SARL</span>
+                                Société Multi Services <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-600 bg-clip-text text-transparent">SMS SARL</span>
                             </p>
                             <div className="subtitle-container mt-8 flex flex-col sm:flex-row gap-6 justify-center">
                                 <div className="subtitle-apropos bg-white/20 backdrop-blur-sm px-8 py-4 rounded-2xl text-lg font-semibold">

@@ -22,7 +22,8 @@
 // }
 import { Routes, Route } from 'react-router-dom'
 import Accueil from './pages/Accueil'
-import APropos from "./pages/APropos.jsx";
+import APropos from "./pages/APropos";
+import Services from "./pages/Services";
 
 export default function App() {
     return (
@@ -31,6 +32,7 @@ export default function App() {
                 <Route path="/" element={<Accueil />} />
                 <Route path="/test" element={<div style={{padding: '50px'}}><h2>✅ TEST</h2></div>} />
                 <Route path="/a-propos" element={<APropos />} />
+                <Route path="/service" element={<Services />} />
             </Routes>
         </div>
     )
