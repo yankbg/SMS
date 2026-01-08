@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import './style.css';
@@ -17,11 +18,19 @@ export default function Contact() {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+
+    const serviceId = 'service_2hfejfj';
+    const templateId = 'template_u3g2b1o';
+    const publicKey = 'SUs0WWzrxpY6GNvGk';
     const handleSubmit = (e) => {
         e.preventDefault();
-        setStatus('Message envoyé ! Nous vous contactons sous 24h.');
-        setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-        setTimeout(() => setStatus(''), 5000);
+        emailjs.send(serviceId, templateId, formData, publicKey)
+            .then(() => {
+                setStatus('Message envoyé avec succès !');
+                // Reset...
+                setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+            })
+            .catch(() => setStatus('Erreur envoi. Réessayez.'));
     };
 
     const ContactCard = ({icon, title, detail1, detail2}) => (
