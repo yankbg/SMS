@@ -4,6 +4,20 @@ import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import './style.css';
 
+const ContactCard = ({icon, title, detail1, detail2}) => (
+    <div className="contact-card p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 hover:-translate-y-3 transition-all duration-500 border border-gray-200/50 group">
+        <div className="contact-icon w-20 h-20 card-svg-services text-3xl flex items-center justify-center rounded-3xl mb-6 shadow-2xl mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all">
+            <span>{icon}</span>
+        </div>
+        <h3 className="text-2xl font-black text-gray-900 mb-4 text-center group-hover:text-orange-700 transition-colors">{title}</h3>
+        <div className="space-y-2 text-center">
+            <p className="text-lg font-semibold text-gray-800">{detail1}</p>
+            <p className="text-gray-600">{detail2}</p>
+
+        </div>
+    </div>
+);
+
 export default function Contact() {
     const [formData, setFormData] = useState({
         name: '',
@@ -19,9 +33,12 @@ export default function Contact() {
     };
 
 
-    const serviceId = 'service_2hfejfj';
-    const templateId = 'template_u3g2b1o';
-    const publicKey = 'SUs0WWzrxpY6GNvGk';
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         emailjs.send(serviceId, templateId, formData, publicKey)
@@ -33,19 +50,7 @@ export default function Contact() {
             .catch(() => setStatus('Erreur envoi. Réessayez.'));
     };
 
-    const ContactCard = ({icon, title, detail1, detail2}) => (
-        <div className="contact-card p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 hover:-translate-y-3 transition-all duration-500 border border-gray-200/50 group">
-            <div className="contact-icon w-20 h-20 card-svg-services text-3xl flex items-center justify-center rounded-3xl mb-6 shadow-2xl mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all">
-                <span>{icon}</span>
-            </div>
-            <h3 className="text-2xl font-black text-gray-900 mb-4 text-center group-hover:text-orange-700 transition-colors">{title}</h3>
-            <div className="space-y-2 text-center">
-                <p className="text-lg font-semibold text-gray-800">{detail1}</p>
-                <p className="text-gray-600">{detail2}</p>
 
-            </div>
-        </div>
-    );
 
     return (
         <>
