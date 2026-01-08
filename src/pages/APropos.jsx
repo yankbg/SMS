@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+// import React from 'react';
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import './style.css'
@@ -17,6 +18,9 @@ export default function APropos() {
     )
 
     const AProposContent = () => {
+        const [showEngins, setShowEngins] = useState(false);
+        const [showPrecision, setShowPrecision] = useState(false);
+        const [showRoulant, setShowRoulant] = useState(false);
         return (
             <div className="main-apropos min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
                 {/* Hero À Propos */}
@@ -83,7 +87,7 @@ export default function APropos() {
                 </section>
 
                 {/* Équipe & Références */}
-                <section className="py-24 bg-gradient-to-r from-gray-50 to-slate-100">
+                <section className="reference-container py-24 bg-gradient-to-r from-gray-50 to-slate-100">
                     <div className="container mx-auto px-6">
                         <div className="reference-title text-center mb-20">
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">Nos Forces</h2>
@@ -166,40 +170,40 @@ export default function APropos() {
                                 <h3 className="text-3xl font-bold text-gray-900 mb-8">Références Officielles</h3>
                                 <div className="reference-apropos space-y-4">
                                     <div
-                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500">
-                                        <span
-                                            className="font-mono text-sm bg-blue-200 px-3 py-1 rounded-full">RCCM</span>
-                                        <div className="font-bold text-lg mt-2">CD/GOM/RCCM/23-B-00096</div>
+                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-color-logo">
+                                        <p
+                                            className="font-mono text-sm  px-3 py-1">RCCM</p>
+                                        <h4 className="font-bold text-lg mt-2">CD/GOM/RCCM/23-B-00096</h4>
                                     </div>
                                     <div
-                                        className="reference-item bg-gradient-to-r from-orange-100 to-yellow-50 p-6 rounded-2xl border-l-4 border-orange-500">
-                                        <span
-                                            className="font-mono text-sm bg-orange-200 px-3 py-1 rounded-full">ID Nat.</span>
-                                        <div className="font-bold text-lg mt-2">19-F4200-N42091Z</div>
+                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-color-logo">
+                                        <p
+                                            className="font-mono text-sm  px-3 py-1">ID Nat.</p>
+                                        <h4 className="font-bold text-lg mt-2">19-F4200-N42091Z</h4>
                                     </div>
                                     <div
-                                        className="reference-item bg-gradient-to-r from-purple-100 to-pink-50 p-6 rounded-2xl border-l-4 border-purple-500">
-                                        <span
-                                            className="font-mono text-sm bg-purple-200 px-3 py-1 rounded-full">IMPÔT</span>
-                                        <div className="font-bold text-lg mt-2">A2403844F</div>
+                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-color-logo">
+                                        <p
+                                            className="font-mono text-sm  px-3 py-1">IMPÔT</p>
+                                        <h4 className="font-bold text-lg mt-2">A2403844F</h4>
                                     </div>
                                     <div
-                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500">
-                                        <span className="font-mono text-sm bg-blue-200 px-3 py-1 rounded-full">Status harmonisés au droit OHADA</span>
-                                        <div className="font-bold text-lg mt-2">Acte notarié n 050/2024 du 21/02/2024
-                                        </div>
+                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-color-logo">
+                                        <p className="font-mono text-sm  px-3 py-1">Status harmonisés au droit OHADA</p>
+                                        <h4 className="font-bold text-lg mt-2">Acte notarié n 050/2024 du 21/02/2024
+                                        </h4>
                                     </div>
                                     <div
-                                        className="reference-item bg-gradient-to-r from-orange-100 to-yellow-50 p-6 rounded-2xl border-l-4 border-orange-500">
-                                        <span className="font-mono text-sm bg-orange-200 px-3 py-1 rounded-full">certificat d'Agrément TPI</span>
-                                        <div className="font-bold text-lg mt-2">N 68/EC-D/01-18/NK du 10 Octobre 2023
-                                        </div>
+                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-color-logo">
+                                        <p className="font-mono text-sm  px-3 py-1">certificat d'Agrément TPI</p>
+                                        <h4 className="font-bold text-lg mt-2">N 68/EC-D/01-18/NK du 10 Octobre 2023
+                                        </h4>
                                     </div>
                                     <div
-                                        className="reference-item bg-gradient-to-r from-purple-100 to-pink-50 p-6 rounded-2xl border-l-4 border-purple-500">
-                                        <span className="font-mono text-sm bg-purple-200 px-3 py-1 rounded-full">Certificat d'affiliation a la CNSS</span>
-                                        <div className="font-bold text-lg mt-2">N 443/8/570/B/PMEA/DIVIPRON/N-K/2023
-                                        </div>
+                                        className="reference-item bg-gradient-to-r from-blue-100 to-indigo-50 p-6 rounded-2xl border-l-4 border-color-logo">
+                                        <p className="font-mono text-sm  px-3 py-1">Certificat d'affiliation a la CNSS</p>
+                                        <h4 className="font-bold text-lg mt-2">N 443/8/570/B/PMEA/DIVIPRON/N-K/2023
+                                        </h4>
                                     </div>
 
                                 </div>
@@ -210,7 +214,7 @@ export default function APropos() {
                         <section className="materiel-section py-24 bg-gradient-to-r from-blue-50 via-red-50 to-blue-100">
                             <div className="container mx-auto px-6">
                                 <div className="text-center mb-20">
-                                    <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full text-sm font-semibold w-fit mx-auto mb-8 shadow-lg">
+                                    <div className="icon-badge-Apropos inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full text-sm font-semibold w-fit mx-auto mb-8 shadow-lg">
                                         <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
                                         </svg>
@@ -238,6 +242,19 @@ export default function APropos() {
                                             <EquipmentCard icon="🛡️" title="1 Chargeur" desc="Manutention matériaux" />
                                             <EquipmentCard icon="🚛" title="4 Camions" desc="Transport matériaux" />
                                             <EquipmentCard icon="📏" title="2 Cyclomètres" desc="Mesures topographiques" />
+                                        </div>
+                                        <div className="text-center">
+                                            <button onClick={() => setShowEngins(!showEngins)} className="cta-projet01 toggle-btn px-8 py-4  text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-orange-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center mx-auto">
+                                                {showEngins ? 'Voir moins ' : 'Voir plus '}
+                                                <svg className="w-5 h-5 mr-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                        {/* Contenu dropdown caché - visible au clic */}
+                                        <div className={` mt-6 grid grid-rows-1 md:grid-rows-3 gap-6 ${showEngins ? 'block animate-fadeIn' : 'hidden'}`}>
+
                                             <EquipmentCard icon="📐" title="1 Niveau automatique" desc="Nivellement précis" />
                                             <EquipmentCard icon="🚧" title="1 Niveleuse" desc="Nivellement routes" />
                                             <EquipmentCard icon="🔨" title="1 Compacteur" desc="Compactage sols" />
@@ -263,7 +280,7 @@ export default function APropos() {
                                 {/* MATÉRIEL ROULANT */}
                                 <div className="text-center mb-20">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-8">Matériel Roulant</h3>
-                                    <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                                    <div className="grid md:grid-cols-5 gap-6 max-w-5xl mx-auto">
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
                                             <div className="text-4xl mb-3">🚐</div>
                                             <h4 className="font-bold text-lg mb-2">1 Mini Van Toyota Noah</h4>
@@ -289,17 +306,7 @@ export default function APropos() {
                             </div>
                         </section>
                         {/* CTA */}
-                        <div className="cta-projet text-center">
-                            <a href="/contact"
-                               className="cta-projet01 group inline-flex items-center px-12 py-6 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-3xl font-bold text-xl shadow-2xl hover:shadow-emerald-500/50 hover:-translate-y-2 transition-all duration-300">
-                                <span className="span-cta">Discuter de votre projet</span>
-                                <svg className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-all" fill="none"
-                                     stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                          d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                                </svg>
-                            </a>
-                        </div>
+
                     </div>
                 </section>
             </div>
