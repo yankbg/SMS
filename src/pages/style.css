@@ -447,7 +447,7 @@ body{
 }
 /*------------------------------  A PROPOS PAGE DESIGN ----------------------------*/
 .main-apropos{
-    margin-top: 80px;
+    margin-top: 5rem;
 }
 .section-hero{
     padding: 20px 0;
@@ -516,7 +516,7 @@ body{
 }
 /*--------------------------------------------NOS SERVICES----------------------------------*/
 .main-services{
-    margin-top: 80px;
+    margin-top: 5rem;
 }
 .hero-text-services{
     justify-self: center;
@@ -570,4 +570,57 @@ body{
 .section-complementaire{
     padding-top: 1rem;
 }
-
+/*---------------------------------- Conctact design ------------------------*/
+.main-contact{
+    margin-top: 5rem;
+}
+.hero-section-contact{
+    margin-bottom: 2rem;
+}
+.hero-div-contact{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sms-blue-text{
+    color: #0403fb;
+}
+.hero-bottom-contact a{
+    padding: 0 1rem;
+}
+.contact-card{
+    padding: 1.5rem;
+}
+.horaire-contact{
+    margin-top: 2rem;
+}
+.horaire-contact h3{
+    margin: 1rem;
+}
+.formulaire-section-contact{
+    margin-top: 2rem;
+    padding: 1rem;
+}
+.formulaire-title h2{
+    margin-bottom: 1rem;
+}
+.formulaire-title form{
+    margin-top: 1rem;
+}
+.formulaire-title form div{
+    margin-top: 1rem;
+}
+.input-contact, .select-contact,.textarea-contact{
+    padding: 0.2rem 0.5rem;
+}
+.envoyezbtn{
+    padding: 0.5rem 1rem;
+    background-color: #f97316;
+}
+.carte-info-contact{
+    padding: 1rem;
+}
+.carte-info-p{
+    margin-bottom: 1rem;
+}

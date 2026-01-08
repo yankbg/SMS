@@ -38,11 +38,7 @@ const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStat
         </div>
     );
 }
-// const Navbar = () => {
-//     return (
-//
-//     );
-// }
+
 const Objectif = () => {
     return (
         <section id="objectifs" className="objectifs">
@@ -93,80 +89,6 @@ const Objectif = () => {
         </section>
     );
 }
-// const Stat = ({number, label}) => (
-//     <div>
-//         <div className="text-3xl font-bold text-blue-600">{number}</div>
-//         <div className="text-gray-600">{label}</div>
-//     </div>
-// );
-// const StatCard = ({number, label, icon, color}) => (
-//     <div className="group relative bg-white/70 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border border-white/50 hover:border-blue-200">
-//         {/* Badge icône flottant */}
-//         <div className={`absolute -top-8 left-1/2 -translate-x-1/2 w-20 h-20 ${color} text-3xl flex items-center justify-center rounded-2xl shadow-2xl group-hover:scale-110 transition-all duration-300`}>
-//             <span>{icon}</span>
-//         </div>
-//
-//         {/* Nombre principal */}
-//         <div className="text-center">
-//             <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-4 pt-12">
-//                 {number}
-//             </div>
-//             <div className="text-lg md:text-xl font-semibold text-gray-800 tracking-wide">
-//                 {label}
-//             </div>
-//         </div>
-//
-//         {/* Ligne décorative */}
-//         <div className="w-20 h-1 bg-gradient-to-r from-transparent via-blue-400 to-transparent mx-auto mt-6 rounded-full opacity-60 group-hover:opacity-100 transition-opacity"></div>
-//     </div>
-// )
-//
-// const Apropos = () => {
-//     return (
-//         <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 relative overflow-hidden">
-//             {/* Arrière-plan décoratif */}
-//             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-//             <div className="absolute top-20 right-20 w-72 h-72 bg-blue-200/30 rounded-full blur-xl"></div>
-//
-//             <div className="max-w-6xl mx-auto px-6 relative z-10">
-//                 {/* Titre avec badge */}
-//                 <div className="text-center mb-16">
-//                     <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white rounded-full text-sm font-semibold mb-6 shadow-lg fondee-title">
-//                         <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-//                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
-//                         </svg>
-//                         FONDÉE EN 2023
-//                     </div>
-//                     <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-6">
-//                         Depuis 2023 à Goma
-//                     </h2>
-//                     <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-//                         <span className="font-semibold text-blue-900">RCCM CD/GOM/RCCM/23-B-00096</span>{' '}
-//                         | 12 experts qualifiés | Équipements modernes de pointe
-//                     </p>
-//                 </div>
-//
-//                 {/* Stats avec animations */}
-//                 <div className="grid md:grid-cols-3 gap-8">
-//                     <StatCard number="12+" label="Experts" icon="👷" color="from-emerald-500 to-green-600" />
-//                     <StatCard number="6+" label="Engins TP" icon="🚜" color="from-blue-500 to-indigo-600" />
-//                     <StatCard number="3+" label="Co-entreprises" icon="🌍" color="from-purple-500 to-pink-600" />
-//                 </div>
-//
-//                 {/* CTA subtil */}
-//                 <div className="text-center mt-20">
-//                     <a href="/contact" className="inline-flex items-center px-8 py-4 bg-white/80 backdrop-blur-sm border-2 border-blue-200 rounded-2xl font-semibold text-lg text-gray-900 hover:bg-white hover:shadow-2xl hover:-translate-y-1 transition-all duration-300">
-//                         <span>Nos Références Complètes</span>
-//                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-//                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-//                         </svg>
-//                     </a>
-//                 </div>
-//             </div>
-//         </section>
-//
-//     );
-// }
 const StatCard = ({ number, label, icon, color }) => (
     <div className="group relative bg-white/60 backdrop-blur-xl p-10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-white/40 hover:border-blue-300">
 
