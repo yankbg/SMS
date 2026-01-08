@@ -275,7 +275,7 @@ body{
     font-weight: 700;
     text-align: center;
     margin-bottom: 3rem;
-    color: #1e40af;
+    color: #0403fb;
 }
 /*APropos section*/
 .subtitle-apropos{
@@ -286,7 +286,7 @@ body{
     margin: 0 auto;
 }
 .title-fondee{
-    padding: 8px 10px;
+    padding: 0 1rem;
 }
 .cta-apropos{
     margin: 2rem;
@@ -298,6 +298,7 @@ body{
 }
 .title-apropos{
     margin-bottom: 2.5rem;
+    padding: 1rem;
 }
 .svg-fondee{
     margin-left: 10px;

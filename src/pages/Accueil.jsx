@@ -172,7 +172,7 @@ const StatCard = ({ number, label, icon, color }) => (
 
         {/* Floating Icon Badge */}
         <div className="icon-badge">
-            <div className={`absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-br ${color} text-4xl flex items-center justify-center rounded-3xl shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+            <div className={`absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24  ${color} text-4xl flex items-center justify-center rounded-3xl shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                 <span className="drop-shadow-md">{icon}</span>
             </div>
         </div>
@@ -224,9 +224,9 @@ const Apropos = () => {
 
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-10">
-                    <StatCard number="12+" label="Experts" icon="👷" color="from-orange-400 via-orange-300 to-orange-600" />
-                    <StatCard number="6+" label="Engins TP" icon="🚜" color="from-orange-700 to-blue-700" />
-                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="from-blue-500 to-indigo-700" />
+                    <StatCard number="12+" label="Experts" icon="👷" color="card-svg-services" />
+                    <StatCard number="6+" label="Engins TP" icon="🚜" color="card-svg-services" />
+                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="card-svg-services" />
                 </div>
 
                 {/* CTA */}
