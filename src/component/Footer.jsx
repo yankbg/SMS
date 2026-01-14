@@ -26,8 +26,8 @@ export default function Footer() {
                     </div>
                     <div className="footer-section">
                         <h3>Contact</h3>
-                        <p>Email: contact@sms-sarl.com</p>
-                        <p>Telephone: A votre service</p>
+                        <p>Email: sms.sarl33@gmail.com</p>
+                        <p>Telephone: +243 990 410 752</p>
                     </div>
                 </div>
                 <div className="footer-bottom">
