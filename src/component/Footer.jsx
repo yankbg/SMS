@@ -30,7 +30,7 @@ export default function Footer() {
                         <p>Telephone: +243 990 410 752</p>
                     </div>
                 </div>
-                <div className="footer-bottom">
+                <div className="footer-bottom flex justify-center">
                     <p>yaan kbg &copy; 2024 SMS SARL. Tous droits reserves.</p>
                 </div>
             </div>

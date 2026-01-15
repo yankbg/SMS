@@ -168,7 +168,7 @@ export default function Services() {
                                     🤝
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Co-entreprises Internationales</h3>
-                                <p className="text-lg text-gray-700 max-w-md mx-auto">
+                                <p className="text-lg text-gray-700  mx-auto ">
                                     Partenariats avec Rhombus Construction (RDC), Nobac International (Burundi),
                                     M'S Resources (Tanzanie) pour des projets d'envergure.
                                 </p>
@@ -179,7 +179,7 @@ export default function Services() {
                                     ⚙️
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Clé en Main</h3>
-                                <p className="text-lg text-gray-700 max-w-md mx-auto">
+                                <p className="text-lg text-gray-700  mx-auto">
                                     De l'étude à la remise des clés : conception, réalisation, logistique,
                                     maintenance. Un interlocuteur unique pour tous vos projets.
                                 </p>
@@ -190,7 +190,7 @@ export default function Services() {
                                     🌱
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Durabilité & Innovation</h3>
-                                <p className="text-lg text-gray-700 max-w-md mx-auto">
+                                <p className="text-lg text-gray-700  mx-auto">
                                     Technologies modernes, matériaux durables, pratiques éco-responsables.
                                     BTP du 21ème siècle pour la reconstruction de la RDC.
                                 </p>
