@@ -5,7 +5,7 @@ import Footer from "../component/Footer";
 import './style.css';
 
 const ContactCard = ({icon, title, detail1, detail2}) => (
-    <div className="contact-card p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 hover:-translate-y-3 transition-all duration-500 border border-gray-200/50 group">
+    <div className="contact-card p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 hover:-translate-y-3 transition-all duration-500 border border-gray-200/50 group" data-aos="fade-up" data-aos-delay="0">
         <div className="contact-icon w-20 h-20 card-svg-services text-3xl flex items-center justify-center rounded-3xl mb-6 shadow-2xl mx-auto group-hover:scale-110 group-hover:rotate-6 transition-all">
             <span>{icon}</span>
         </div>
@@ -61,13 +61,13 @@ export default function Contact() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,165,0,0.2),transparent_50%)]"></div>
                     <div className="hero-div-contact container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center text-white">
-                            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6">
+                            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6" data-aos="zoom-in" data-aos-delay="0">
                                 Contactez-Nous
                             </h1>
-                            <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed mb-12">
+                            <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="0">
                                 Votre projet mérite <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">l'excellence SMS SARL</span>
                             </p>
-                            <div className="hero-bottom-contact flex flex-col sm:flex-row gap-6 justify-center">
+                            <div className="hero-bottom-contact flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="100">
                                 <a href="tel:+243990410752" className="bg-white/20 backdrop-blur-sm  px-12 py-5 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300">
                                     📞 +243 990 410 752
                                 </a>
@@ -107,14 +107,14 @@ export default function Contact() {
 
                         {/* Horaires */}
                         <div className="horaire-contact text-center mb-24">
-                            <h3 className="text-3xl font-bold text-gray-900 mb-8">Horaires d'ouverture</h3>
+                            <h3 className="text-3xl font-bold text-gray-900 mb-8" data-aos="zoom-in" data-aos-delay="0">Horaires d'ouverture</h3>
                             <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-                                <div className="p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl">
+                                <div className="p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
                                     <h4 className="font-bold text-2xl mb-4">Goma</h4>
                                     <p className="text-lg mb-2">Lundi-Vendredi: 08h-18h</p>
-                                    <p>Samedi: 08h-14h</p>
+                                    <p>Samedi: 10h-16h</p>
                                 </div>
-                                <div className="p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl">
+                                <div className="p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
                                     <h4 className="font-bold text-2xl mb-4">Kinshasa</h4>
                                     <p className="text-lg mb-2">Lundi-Vendredi: 08h-17h</p>
                                     <p>Samedi: 09h-13h</p>
@@ -131,14 +131,14 @@ export default function Contact() {
                             <div className="grid lg:grid-cols-2 gap-12 items-start justify-center ">
                                 {/* Formulaire */}
                                 <div className="formulaire-title space-y-6">
-                                    <h2 className="text-4xl font-black text-gray-900 mb-4 leading-tight">
+                                    <h2 className="text-4xl font-black text-gray-900 mb-4 leading-tight" data-aos="zoom-in" data-aos-delay="0">
                                         Demandez votre <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">devis gratuit</span>
                                     </h2>
-                                    <p className="text-xl text-gray-600 mb-8">
+                                    <p className="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="0">
                                         Remplissez le formulaire - Réponse sous 24h
                                     </p>
 
-                                    <form onSubmit={handleSubmit} className="space-y-6">
+                                    <form onSubmit={handleSubmit} className="space-y-6" data-aos="fade-up" data-aos-delay="0">
                                         <div>
                                             <label className="block text-sm font-semibold text-gray-700 mb-2">Nom Complet *</label>
                                             <input
@@ -225,7 +225,7 @@ export default function Contact() {
                                 </div>
 
                                 {/* Carte Info */}
-                                <div className=" lg:sticky lg:top-24 space-y-8">
+                                <div className=" lg:sticky lg:top-24 space-y-8" data-aos="fade-up" data-aos-delay="0">
                                     <div className="carte-info-contact bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm p-10 rounded-4xl border-2 border-orange-200/50 shadow-2xl">
                                         <h3 className="text-3xl font-black text-gray-900 mb-6 text-center">Devis en 24h</h3>
                                         <div className="space-y-4 text-center">

@@ -5,7 +5,7 @@ import './style.css';
 
 export default function Services() {
     const ServiceCard = ({icon, title, desc, details, color}) => (
-        <div className="service-card group p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border border-gray-200/50 hover:border-orange-300 overflow-hidden">
+        <div data-aos="fade-up" data-aos-delay="0" className="service-card group p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 border border-gray-200/50 hover:border-orange-300 overflow-hidden">
             <div className={`service-icon w-20 h-20 ${color} text-3xl flex items-center justify-center rounded-3xl mb-6 shadow-2xl group-hover:scale-110 transition-all mx-auto`}>
                 <span>{icon}</span>
             </div>
@@ -36,10 +36,10 @@ export default function Services() {
                     <div className="hero-text-001 container mx-auto px-6 relative z-10">
                         <div className="hero-text-services max-w-4xl mx-auto text-center text-white">
 
-                            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6">
+                            <h1 data-aos="zoom-in" data-aos-delay="0" className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6">
                                 Nos Services
                             </h1>
-                            <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed">
+                            <p data-aos="fade-up" data-aos-delay="100" className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed">
                                 Solutions complètes en <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">Architecture, Génie Civil & Logistique</span>
                             </p>
                         </div>
@@ -99,10 +99,10 @@ export default function Services() {
                 <section className="section-complementaire py-24 bg-gradient-to-r from-gray-50 to-orange-50">
                     <div className="service-complementaire container mx-auto px-6">
                         <div className="titre-service-complementaire text-center mb-20">
-                            <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-orange-900 bg-clip-text text-transparent mb-6">
+                            <h2 data-aos="zoom-in" data-aos-delay="0" className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-orange-900 bg-clip-text text-transparent mb-6">
                                 Services Complémentaires
                             </h2>
-                            <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+                            <p data-aos="fade-up" data-aos-delay="0" className="text-xl text-gray-700 max-w-2xl mx-auto">
                                 Expertise technique pour tous vos besoins spécifiques
                             </p>
                         </div>
@@ -157,40 +157,40 @@ export default function Services() {
                             <div className="modele-title inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-3xl text-lg font-bold mb-8 shadow-2xl">
                                 NOTRE MODÈLE
                             </div>
-                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0">
                                 Approche <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Intégrée & Collaborative</span>
                             </h2>
                         </div>
 
                         <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                             <div className="modele-card text-center p-12 bg-white/60 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all">
-                                <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl">
+                                <div data-aos="fade-up" data-aos-delay="0" className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl">
                                     🤝
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Co-entreprises Internationales</h3>
-                                <p className="text-lg text-gray-700  mx-auto ">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-aos="zoom-in" data-aos-delay="0">Co-entreprises Internationales</h3>
+                                <p className="text-lg text-gray-700  mx-auto " data-aos="fade-up" data-aos-delay="0">
                                     Partenariats avec Rhombus Construction (RDC), Nobac International (Burundi),
                                     M'S Resources (Tanzanie) pour des projets d'envergure.
                                 </p>
                             </div>
 
                             <div className="modele-card text-center p-12 bg-white/60 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all">
-                                <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl">
+                                <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
                                     ⚙️
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Clé en Main</h3>
-                                <p className="text-lg text-gray-700  mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-aos="zoom-in" data-aos-delay="0">Clé en Main</h3>
+                                <p className="text-lg text-gray-700  mx-auto" data-aos="fade-up" data-aos-delay="0">
                                     De l'étude à la remise des clés : conception, réalisation, logistique,
                                     maintenance. Un interlocuteur unique pour tous vos projets.
                                 </p>
                             </div>
 
                             <div className="modele-card text-center p-12 bg-white/60 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all">
-                                <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl">
+                                <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
                                     🌱
                                 </div>
-                                <h3 className="text-2xl font-bold text-gray-900 mb-4">Durabilité & Innovation</h3>
-                                <p className="text-lg text-gray-700  mx-auto">
+                                <h3 className="text-2xl font-bold text-gray-900 mb-4" data-aos="zoom-in" data-aos-delay="0">Durabilité & Innovation</h3>
+                                <p className="text-lg text-gray-700  mx-auto" data-aos="fade-up" data-aos-delay="0">
                                     Technologies modernes, matériaux durables, pratiques éco-responsables.
                                     BTP du 21ème siècle pour la reconstruction de la RDC.
                                 </p>
