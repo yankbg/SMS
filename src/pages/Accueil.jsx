@@ -4,7 +4,6 @@ import {useState} from "react";
 import "./style.css";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
-import smsLgo from "../assets/logo.jpeg";
 import video1 from "../assets/video1.mp4";
 import img1 from "../assets/image1.jpg";
 import img2 from "../assets/image002.jpg";
