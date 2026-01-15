@@ -21,7 +21,7 @@ const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStat
                 <p className="text2">{heroData.text2}</p>
             </div>
             <div className="hero-explore">
-                <div className="explore-text">Contactez nous</div>
+                <Link to="/contact" className="explore-text">Contactez nous</Link>
                 <img src={arrow} alt="arrow" className="arrow-icon"/>
             </div>
             <div className="hero-dot-play">
@@ -152,13 +152,13 @@ const Apropos = () => {
                 </div>
 
                 {/* CTA */}
-                <div className="cta-apropos">
-                    <a href="/contact" className="inline-flex items-center px-10 py-5 bg-white/80 backdrop-blur-md border-2 border-transparent rounded-3xl font-semibold text-lg text-gray-900 hover:border-blue-400 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
+                <div className="cta-apropos  flex justify-center">
+                    <Link to="/contact" className="inline-flex items-center px-10 py-5 bg-white/80 backdrop-blur-md border-2 border-transparent rounded-3xl font-semibold text-lg text-gray-900 hover:border-blue-400 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
                         <span>Nos Références Complètes</span>
                         <svg className="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
