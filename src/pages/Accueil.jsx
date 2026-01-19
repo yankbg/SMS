@@ -16,7 +16,7 @@ const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStat
     return(
         <div className="hero-section">
             <div className="hero-text" >
-                <p className="text1" data-aos="fade-up" data-aos-delay="100">{heroData.text1}</p>
+                <h1 className="text1" data-aos="fade-up" data-aos-delay="100">{heroData.text1}</h1>
                 <p className="text2" data-aos="fade-up" data-aos-delay="200">{heroData.text2}</p>
             </div>
             <div className="hero-explore" data-aos="fade-up" data-aos-delay="0">

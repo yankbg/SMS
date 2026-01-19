@@ -36,11 +36,11 @@ export default function Services() {
                     <div className="hero-text-001 container mx-auto px-6 relative z-10">
                         <div className="hero-text-services max-w-4xl mx-auto text-center text-white">
 
-                            <h1 data-aos="zoom-in" data-aos-delay="0" className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6">
-                                Nos Services
+                            <h1 data-aos="zoom-in" data-aos-delay="0" className="text-3xl md:text-4xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6">
+                                Nos Services Architecture, Génie Civil et Logistique en RDC
                             </h1>
                             <p data-aos="fade-up" data-aos-delay="100" className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed">
-                                Solutions complètes en <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">Architecture, Génie Civil & Logistique</span>
+                                Expertise intégrée pour <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">tous vos chantiers en RDC.</span>
                             </p>
                         </div>
                     </div>

@@ -61,8 +61,8 @@ export default function Contact() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,165,0,0.2),transparent_50%)]"></div>
                     <div className="hero-div-contact container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center text-white">
-                            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6" data-aos="zoom-in" data-aos-delay="0">
-                                Contactez-Nous
+                            <h1 className="text-2xl md:text-4xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6" data-aos="zoom-in" data-aos-delay="0">
+                                Contact SMS SARL - Architecture, Génie Civil et Logistique RDC
                             </h1>
                             <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="0">
                                 Votre projet mérite <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">l'excellence SMS SARL</span>

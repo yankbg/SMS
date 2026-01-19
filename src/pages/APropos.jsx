@@ -57,10 +57,10 @@ export default function APropos() {
                                     </svg>
                                     NOTRE MISSION
                                 </div>
-                                <h2 className="text-4xl md:text-5xl font-black text-gray-900 max-w-lg leading-tight" data-aos="zoom-in" data-aos-delay="0">
+                                <h1 className="text-4xl md:text-5xl font-black text-gray-900 max-w-lg leading-tight" data-aos="zoom-in" data-aos-delay="0">
                                     Contribuer à la reconstruction<br/>
                                     <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-600 bg-clip-text text-transparent">de notre cher pays</span>
-                                </h2>
+                                </h1>
                                 <p className="text-xl text-gray-600 max-w-xl leading-relaxed" data-aos="fade-up" data-aos-delay="0">
                                     Avec un profond désir de participer à la reconstruction de la RDC, SMS SARL offre des services d'excellence
                                     dans l'architecture, génie civil, travaux publics, transport, logistique et import-export.
