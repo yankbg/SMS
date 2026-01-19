@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
 Sitemap: https://sms-rdc.vercel.app/sitemap.xml
+User-agent: Bingbot
+User-agent: Googlebot
