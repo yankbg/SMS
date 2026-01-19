@@ -90,7 +90,7 @@ export default function APropos() {
                 <section className="reference-container py-24 bg-gradient-to-r from-gray-50 to-slate-100">
                     <div className="container mx-auto px-6">
                         <div className="reference-title text-center mb-20">
-                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0">Nos Forces</h2>
+                            <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0" id="equipe-qualifier">Nos Forces</h2>
                             <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="0">
                                 Expertise humaine et matérielle au service de vos projets
                             </p>
@@ -98,8 +98,8 @@ export default function APropos() {
 
                         <div className="grid lg:grid-cols-2 gap-16 mb-20">
                             {/* Équipe */}
-                            <div>
-                                <h3 className="text-3xl font-bold text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="0" id="equipe-qualifier">Équipe Qualifiée</h3>
+                            <div >
+                                <h3 className="text-3xl font-bold text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="0">Équipe Qualifiée</h3>
                                 <div className="equipe-container space-y-6">
                                     <div
                                         className="flex items-start space-x-4 p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="0">
@@ -211,7 +211,7 @@ export default function APropos() {
                             </div>
                         </div>
                         {/* ÉQUIPEMENTS & MATÉRIEL */}
-                        <section className="materiel-section py-24 bg-gradient-to-r from-blue-50 via-red-50 to-blue-100">
+                        <section className="materiel-section py-24 bg-gradient-to-r from-blue-50 via-red-50 to-blue-100" id="Engins">
                             <div className="container mx-auto px-6">
                                 <div className="text-center mb-20">
                                     <div className="icon-badge-Apropos inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full text-sm font-semibold w-fit mx-auto mb-8 shadow-lg">

@@ -88,12 +88,12 @@ const Objectif = () => {
         </section>
     );
 }
-const StatCard = ({ number, label, icon, color, aos_delay}) => (
+const StatCard = ({ number, label, icon, color, aos_delay, link}) => (
     <div className="group relative bg-white/60 backdrop-blur-xl p-10 rounded-3xl shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-white/40 hover:border-blue-300" data-aos="fade-up" data-aos-delay={`${aos_delay}`}>
 
         {/* Floating Icon Badge */}
         <div className="icon-badge">
-            <Link to="/apropos#equipequalifier" className={`absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24  ${color} text-4xl flex items-center justify-center rounded-3xl shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+            <Link to={`/${link}`} className={`absolute -top-10 left-1/2 -translate-x-1/2 w-24 h-24  ${color} text-4xl flex items-center justify-center rounded-3xl shadow-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
                 <span className="drop-shadow-md">{icon}</span>
             </Link>
         </div>
@@ -145,9 +145,9 @@ const Apropos = () => {
 
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-10">
-                    <StatCard number="12+" label="Experts" icon="👷" color="card-svg-services" aos_delay="0" />
-                    <StatCard number="6+" label="Engins TP" icon="🚜" color="card-svg-services" aos_delay="150"/>
-                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="card-svg-services" aos_delay="300"/>
+                    <StatCard number="12+" label="Experts" icon="👷" color="card-svg-services" aos_delay="0"  link="a-propos#equipe-qualifier"/>
+                    <StatCard number="6+" label="Engins TP" icon="🚜" color="card-svg-services" aos_delay="150" link="a-propos#Engins"/>
+                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="card-svg-services" aos_delay="300" link="a-propos"/>
                 </div>
 
                 {/* CTA */}

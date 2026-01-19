@@ -361,6 +361,9 @@ body{
     .background{
         height: 45%;
     }
+    .navbar{
+        justify-content: space-between;
+    }
     .nav-menu {
         position: fixed;
         top: 100%;
