@@ -3,6 +3,7 @@ import Accueil from './pages/Accueil'
 import APropos from "./pages/APropos";
 import Services from "./pages/Services";
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound';
 
 export default function App() {
     return (
@@ -12,6 +13,7 @@ export default function App() {
                 <Route path="/a-propos" element={<APropos />} />
                 <Route path="/service" element={<Services />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
 
 
             </Routes>
