@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import React, {useEffect} from "react";
 import {useState} from "react";
+import { Helmet } from 'react-helmet-async';
 import "./style.css";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
@@ -208,6 +209,14 @@ const Home = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>SMS SARL - Génie Civil & Travaux Publics à Goma, Nord-Kivu RDC</title>
+                <meta name="description" content="SMS SARL, leader en génie civil, architecture et logistique à Goma (RDC). Conception, construction, import-export. Devis gratuit sous 24h. +243 990 410 752" />
+                <link rel="canonical" href="https://sms-rdc.vercel.app/" />
+                <meta property="og:title" content="SMS SARL - Génie Civil & Travaux Publics à Goma, Nord-Kivu RDC" />
+                <meta property="og:description" content="SMS SARL, leader en génie civil, architecture et logistique à Goma (RDC). Devis gratuit sous 24h." />
+                <meta property="og:url" content="https://sms-rdc.vercel.app/" />
+            </Helmet>
             <Navbar/>
             <div className="hero-wrapper">
                 <Background playStatus={playStatus}  heroCount={heroCount} />

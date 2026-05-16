@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import emailjs from 'emailjs-com';
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
@@ -54,6 +55,14 @@ export default function Contact() {
 
     return (
         <>
+            <Helmet>
+                <title>Contact SMS SARL - Devis Gratuit sous 24h | Goma & Kinshasa</title>
+                <meta name="description" content="Contactez SMS SARL pour un devis gratuit. Av. Bobila Dawa n°52, Goma. Tél: +243 990 410 752. Email: sms.sarl33@gmail.com. Réponse sous 24h." />
+                <link rel="canonical" href="https://sms-rdc.vercel.app/contact" />
+                <meta property="og:title" content="Contact SMS SARL - Devis Gratuit sous 24h | Goma & Kinshasa" />
+                <meta property="og:description" content="Demandez votre devis gratuit à SMS SARL. Réponse garantie sous 24h. +243 990 410 752 — sms.sarl33@gmail.com" />
+                <meta property="og:url" content="https://sms-rdc.vercel.app/contact" />
+            </Helmet>
             <Navbar />
             <div className="main-contact min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-emerald-50">
                 {/* Hero Contact */}

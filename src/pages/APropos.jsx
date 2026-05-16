@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
 import './style.css'
@@ -314,6 +314,14 @@ export default function APropos() {
     }
     return (
         <div>
+            <Helmet>
+                <title>À Propos - SMS SARL | Entreprise de Construction Goma RDC</title>
+                <meta name="description" content="Fondée en 2023 à Goma, SMS SARL compte 12 experts qualifiés, 6 engins TP et 3 co-entreprises internationales. RCCM CD/GOM/RCCM/23-B-00096." />
+                <link rel="canonical" href="https://sms-rdc.vercel.app/a-propos" />
+                <meta property="og:title" content="À Propos - SMS SARL | Entreprise de Construction Goma RDC" />
+                <meta property="og:description" content="Fondée en 2023, SMS SARL compte 12 experts, 6 engins TP et 3 co-entreprises internationales à Goma, RDC." />
+                <meta property="og:url" content="https://sms-rdc.vercel.app/a-propos" />
+            </Helmet>
             <Navbar/>
             <AProposContent/>
             <Footer/>

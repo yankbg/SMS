@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import './style.css';
@@ -206,6 +207,14 @@ export default function Services() {
 
     return (
         <div>
+            <Helmet>
+                <title>Nos Services - Génie Civil, Logistique & Immobilier | SMS SARL Goma</title>
+                <meta name="description" content="Conception et exécution de travaux publics, fourniture de matériaux, import-export, véhicules et engins TP, évaluation immobilière à Goma et Kinshasa, RDC." />
+                <link rel="canonical" href="https://sms-rdc.vercel.app/service" />
+                <meta property="og:title" content="Nos Services - Génie Civil, Logistique & Immobilier | SMS SARL Goma" />
+                <meta property="og:description" content="Travaux publics, fourniture matériaux, import-export, engins TP et conseil immobilier à Goma et Kinshasa." />
+                <meta property="og:url" content="https://sms-rdc.vercel.app/service" />
+            </Helmet>
             <Navbar />
             <ServicesContent />
             <Footer />

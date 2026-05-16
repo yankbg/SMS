@@ -1,13 +1,14 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import './style.css'
 
 export default function NotFound() {
-    useEffect(() => {
-        document.title = 'Page non trouvée - SMS SARL';
-    }, []);
-
     return (
+        <>
+        <Helmet>
+            <title>Page non trouvée - SMS SARL</title>
+            <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <div className="min-h-screen bg-gradient-to-br from-orange-50 to-emerald-50 flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
             {/* Animated background elements */}
             <div className="absolute inset-0 opacity-20">
@@ -73,5 +74,6 @@ export default function NotFound() {
         .animation-delay-4000 { animation-delay: 4s; }
       `}</style>
         </div>
+        </>
     );
 }
