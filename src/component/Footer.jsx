@@ -31,7 +31,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="footer-bottom flex justify-center" data-aos="fade-up" data-aos-delay="0">
-                    <p>yaan kbg &copy; 2024 SMS SARL. Tous droits reserves.</p>
+                    <p>&copy; 2026 Société Multi Services SMS SARL. Tous droits réservés.</p>
                 </div>
             </div>
         </footer>
