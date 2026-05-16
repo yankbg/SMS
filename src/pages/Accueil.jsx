@@ -200,17 +200,18 @@ const Home = () => {
     const [heroCount, setHeroCount] = useState(0);
     const [playStatus, setPlayStatus] = useState(false);
     useEffect(() => {
-        setInterval(() => {
-            setHeroCount((count)=>{return count===2?0:count+1})
-        },3000)
+        const id = setInterval(() => {
+            setHeroCount((count) => (count === 2 ? 0 : count + 1));
+        }, 3000);
+        return () => clearInterval(id);
     }, []);
 
     return (
         <div>
-            <div>
+            <Navbar/>
+            <div className="hero-wrapper">
                 <Background playStatus={playStatus}  heroCount={heroCount} />
                 <div className="overlay"></div>
-                <Navbar/>
                 <HeroSection
                     heroData={heroData[heroCount]}
                     heroCount={heroCount}
@@ -218,11 +219,9 @@ const Home = () => {
                     setPlayStatus={setPlayStatus}
                     playStatus={playStatus}
                 />
-                <Objectif/>
-
-                <Apropos/>
-
             </div>
+            <Objectif/>
+            <Apropos/>
             <Footer/>
         </div>
     );

@@ -40,7 +40,7 @@ export default function NotFound() {
                         🏠 Accueil
                     </Link>
                     <Link
-                        to="/services"
+                        to="/service"
                         className="notfound block w-full max-w-sm mx-auto bg-white border-2 border-orange-500 hover:border-emerald-500 text-orange-600 hover:text-emerald-600 font-bold py-4 px-8 rounded-2xl text-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2"
                     >
                         🔧 Nos Services
@@ -52,9 +52,9 @@ export default function NotFound() {
 
                     <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-600">
                         <Link to="/" className="hover:text-orange-500 transition-colors">Accueil</Link>
-                        <Link to="/services" className="hover:text-orange-500 transition-colors">Services</Link>
+                        <Link to="/service" className="hover:text-orange-500 transition-colors">Services</Link>
                         <Link to="/contact" className="hover:text-orange-500 transition-colors">Contact</Link>
-                        <Link to="/apropos" className="hover:text-orange-500 transition-colors">À propos</Link>
+                        <Link to="/a-propos" className="hover:text-orange-500 transition-colors">À propos</Link>
                     </div>
                 </div>
             </div>

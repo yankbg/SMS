@@ -15,17 +15,10 @@ createRoot(document.getElementById('root')).render(
     </StrictMode>,
 )
 AOS.init({
-    duration: 1000,      // 1 seconde
-    easing: 'ease-out-cubic',
-    once: true,          // 1x seulement
-    offset: 100,         // Déclenchement
-    mirror: false
-});
-AOS.init({
     duration: 800,
     easing: 'ease-out-cubic',
     once: true,
     mirror: false,
-    disable: window.innerWidth < 768,  // Pas mobile
+    disable: window.innerWidth < 768,
     offset: 120
 });
