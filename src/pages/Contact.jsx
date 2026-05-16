@@ -68,10 +68,10 @@ export default function Contact() {
                                 Votre projet mérite <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">l'excellence SMS SARL</span>
                             </p>
                             <div className="hero-bottom-contact flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="100">
-                                <a href="tel:+243990410752" className="bg-white/20 backdrop-blur-sm  px-12 py-5 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300">
+                                <a href="tel:+243990410752" className="bg-white/20 backdrop-blur-sm px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300">
                                     📞 +243 990 410 752
                                 </a>
-                                <a href="mailto:sms.sarl33@gmail.com" className="bg-emerald-500/20 backdrop-blur-sm text-white px-12 py-5 rounded-3xl font-bold text-xl border-2 border-white/30 hover:bg-white hover:text-orange-600 transition-all duration-300">
+                                <a href="mailto:sms.sarl33@gmail.com" className="bg-emerald-500/20 backdrop-blur-sm text-white px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl border-2 border-white/30 hover:bg-white hover:text-orange-600 transition-all duration-300">
                                     ✉️ Envoyer un email
                                 </a>
                             </div>

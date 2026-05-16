@@ -253,7 +253,7 @@ export default function APropos() {
                                             </button>
                                         </div>
                                         {/* Contenu dropdown caché - visible au clic */}
-                                        <div className={` mt-6 grid grid-rows-1 md:grid-rows-3 gap-6 ${showEngins ? 'block animate-fadeIn' : 'hidden'}`}>
+                                        <div className={`mt-6 gap-6 ${showEngins ? 'grid grid-cols-1 animate-fadeIn' : 'hidden'}`}>
 
                                             <EquipmentCard icon="📐" title="1 Niveau automatique" desc="Nivellement précis" />
                                             <EquipmentCard icon="🚧" title="1 Niveleuse" desc="Nivellement routes" />
@@ -280,7 +280,7 @@ export default function APropos() {
                                 {/* MATÉRIEL ROULANT */}
                                 <div className="text-center mb-20">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-8">Matériel Roulant</h3>
-                                    <div className="grid md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+                                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
                                             <div className="text-4xl mb-3">🚐</div>
                                             <h4 className="font-bold text-lg mb-2">1 Mini Van Toyota Noah</h4>
