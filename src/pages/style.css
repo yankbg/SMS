@@ -242,7 +242,8 @@ body{
 }
 
 .hero-play p {
-    color: #101828;
+    /* Sur le voile sombre du hero : l'ancien #101828 etait illisible. */
+    color: rgba(255, 255, 255, 0.92);
     font-size: 18px;
     font-weight: 500;
 }
