@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import './style.css'
+import {HomeIcon, WrenchIcon} from "../component/Icons.jsx";
 
 export default function NotFound() {
     return (
@@ -38,13 +39,15 @@ export default function NotFound() {
                         to="/"
                         className="notfound block w-full max-w-sm mx-auto bg-gradient-to-r from-blue-400 to-blue-800 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2"
                     >
-                        🏠 Accueil
+                        <HomeIcon className="w-6 h-6"/>
+                        Accueil
                     </Link>
                     <Link
                         to="/service"
                         className="notfound block w-full max-w-sm mx-auto bg-white border-2 border-orange-500 hover:border-emerald-500 text-orange-600 hover:text-emerald-600 font-bold py-4 px-8 rounded-2xl text-lg shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2"
                     >
-                        🔧 Nos Services
+                        <WrenchIcon className="w-6 h-6"/>
+                        Nos Services
                     </Link>
                 </div>
 

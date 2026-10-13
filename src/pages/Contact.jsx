@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import emailjs from 'emailjs-com';
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import {BoltIcon, BuildingIcon, MailIcon, MapPinIcon, PhoneIcon} from "../component/Icons.jsx";
 import './style.css';
 
 const ContactCard = ({icon, title, detail1, detail2}) => (
@@ -66,7 +67,7 @@ export default function Contact() {
             <Navbar />
             <div className="main-contact min-h-screen bg-gradient-to-br from-slate-50 via-orange-50 to-emerald-50">
                 {/* Hero Contact */}
-                <section className="hero-section-contact pt-32 pb-24 bg-gradient-to-r from-blue-900 to-indigo-900 relative overflow-hidden">
+                <section className="hero-section-contact pt-28 md:pt-32 pb-14 md:pb-24 bg-gradient-to-r from-blue-900 to-indigo-900 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,165,0,0.2),transparent_50%)]"></div>
                     <div className="hero-div-contact container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center text-white">
@@ -77,11 +78,13 @@ export default function Contact() {
                                 Votre projet mérite <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">l'excellence SMS SARL</span>
                             </p>
                             <div className="hero-bottom-contact flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="100">
-                                <a href="tel:+243990410752" className="bg-white/20 backdrop-blur-sm px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300">
-                                    📞 +243 990 410 752
+                                <a href="tel:+243990410752" className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-sm px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300">
+                                    <PhoneIcon className="w-6 h-6"/>
+                                    +243 990 410 752
                                 </a>
-                                <a href="mailto:sms.sarl33@gmail.com" className="bg-emerald-500/20 backdrop-blur-sm text-white px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl border-2 border-white/30 hover:bg-white hover:text-orange-600 transition-all duration-300">
-                                    ✉️ Envoyer un email
+                                <a href="mailto:sms.sarl33@gmail.com" className="inline-flex items-center justify-center gap-3 bg-emerald-500/20 backdrop-blur-sm text-white px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl border-2 border-white/30 hover:bg-white hover:text-orange-600 transition-all duration-300">
+                                    <MailIcon className="w-6 h-6"/>
+                                    Envoyer un email
                                 </a>
                             </div>
                         </div>
@@ -91,22 +94,22 @@ export default function Contact() {
                 {/* Coordonnées */}
                 <section className="py-24">
                     <div className="container mx-auto px-6">
-                        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-24">
+                        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-14 md:mb-24">
                             <ContactCard
-                                icon="📍"
+                                icon={<MapPinIcon className="w-10 h-10 text-white"/>}
                                 title="Adresse Goma"
                                 detail1="Av. Bobila Dawa n°52"
                                 detail2="Q. Kyeshero, Commune de Goma, Nord-Kivu, RDC"
                             />
                             <ContactCard
-                                icon="🏢"
+                                icon={<BuildingIcon className="w-10 h-10 text-white"/>}
                                 title="Adresse Kinshasa"
                                 detail1="Boulevard du 30 Juin"
                                 detail2="Maison Kavali Centre, B31-10"
 
                             />
                             <ContactCard
-                                icon="📧"
+                                icon={<MailIcon className="w-10 h-10 text-white"/>}
                                 title="Contact Direct"
                                 detail1="sms.sarl33@gmail.com"
                                 detail2="+243 990 410 752"
@@ -115,7 +118,7 @@ export default function Contact() {
                         </div>
 
                         {/* Horaires */}
-                        <div className="horaire-contact text-center mb-24">
+                        <div className="horaire-contact text-center mb-14 md:mb-24">
                             <h3 className="text-3xl font-bold text-gray-900 mb-8" data-aos="zoom-in" data-aos-delay="0">Horaires d'ouverture</h3>
                             <div className="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
                                 <div className="p-8 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
@@ -134,7 +137,7 @@ export default function Contact() {
                 </section>
 
                 {/* Formulaire Contact */}
-                <section className="formulaire-section-contact py-24 bg-gradient-to-br from-orange-50 to-emerald-50">
+                <section className="formulaire-section-contact py-14 md:py-24 bg-gradient-to-br from-orange-50 to-emerald-50">
                     <div className="container mx-auto px-6  flex justify-center">
                         <div className="max-w-4xl mx-auto ">
                             <div className="grid lg:grid-cols-2 gap-12 items-start justify-center ">
@@ -238,15 +241,15 @@ export default function Contact() {
                                     <div className="carte-info-contact bg-gradient-to-br from-orange-500/10 to-orange-600/10 backdrop-blur-sm p-10 rounded-4xl border-2 border-orange-200/50 shadow-2xl">
                                         <h3 className="text-3xl font-black text-gray-900 mb-6 text-center">Devis en 24h</h3>
                                         <div className="space-y-4 text-center">
-                                            <div className="text-4xl mb-4">⚡</div>
+                                            <BoltIcon className="w-10 h-10 inline-block mb-4 text-orange-600"/>
                                             <p className="carte-info-p text-xl font-semibold text-gray-800">Réponse garantie sous 24h</p>
                                             <div className="grid grid-cols-1 gap-4 mt-8 text-sm">
                                                 <div className="p-4 bg-white/50 rounded-xl">
-                                                    <div className="font-bold text-orange-600">📞</div>
+                                                    <PhoneIcon className="w-6 h-6 inline-block text-orange-600"/>
                                                     <div>+243 990 410 752</div>
                                                 </div>
                                                 <div className="p-4 bg-white/50 rounded-xl">
-                                                    <div className="font-bold text-emerald-600">✉️</div>
+                                                    <MailIcon className="w-6 h-6 inline-block text-emerald-600"/>
                                                     <div>sms.sarl33@gmail.com</div>
                                                 </div>
                                             </div>

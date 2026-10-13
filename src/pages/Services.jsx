@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
+import {ArrowRightIcon, CartIcon, ChartIcon, CogIcon, CraneIcon, ExcavatorIcon, LeafIcon, PartnershipIcon, TruckIcon} from "../component/Icons.jsx";
 import './style.css';
 
 export default function Services() {
@@ -23,7 +24,10 @@ export default function Services() {
                 ))}
             </ul>
             <div className="service-cta text-center pt-6 border-t border-gray-200">
-                <span className="text-sm text-gray-500 font-medium group-hover:text-orange-600 transition-colors">En savoir plus →</span>
+                <span className="inline-flex items-center gap-2 text-sm text-gray-500 font-medium group-hover:text-orange-600 transition-colors">
+                    En savoir plus
+                    <ArrowRightIcon className="w-4 h-4"/>
+                </span>
             </div>
         </div>
     );
@@ -32,7 +36,7 @@ export default function Services() {
         return (
             <div className="main-services min-h-screen bg-gradient-to-br from-slate-50 via-white to-orange-50">
                 {/* Hero Services */}
-                <section className="hero-section-service pt-32 pb-24 bg-gradient-to-r from-blue-900 to-indigo-900 relative overflow-hidden">
+                <section className="hero-section-service pt-28 md:pt-32 pb-14 md:pb-24 bg-gradient-to-r from-blue-900 to-indigo-900 relative overflow-hidden">
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,165,0,0.2),transparent_50%)]"></div>
                     <div className="hero-text-001 container mx-auto px-6 relative z-10">
                         <div className="hero-text-services max-w-4xl mx-auto text-center text-white">
@@ -53,7 +57,7 @@ export default function Services() {
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
                             {/* Génie Civil */}
                             <ServiceCard
-                                icon="🏗️"
+                                icon={<CraneIcon className="w-10 h-10 text-white"/>}
                                 title="Conception, Étude et Exécution"
                                 desc="Travaux publics et génie civil complets"
                                 details={[
@@ -67,7 +71,7 @@ export default function Services() {
 
                             {/* Promotion Immobilière */}
                             <ServiceCard
-                                icon="🛒"
+                                icon={<CartIcon className="w-10 h-10 text-white"/>}
                                 title="Fourniture Matériaux de Construction"
                                 desc="Tous matériaux de qualité pour vos chantiers"
                                 details={[
@@ -81,7 +85,7 @@ export default function Services() {
 
                             {/* Logistique */}
                             <ServiceCard
-                                icon="🚚"
+                                icon={<TruckIcon className="w-10 h-10 text-white"/>}
                                 title="Import-Export, Transport & Logistique"
                                 desc="Solutions logistiques internationales optimisées"
                                 details={[
@@ -97,9 +101,9 @@ export default function Services() {
                 </section>
 
                 {/* Services Complémentaires */}
-                <section className="section-complementaire py-24 bg-gradient-to-r from-gray-50 to-orange-50">
+                <section className="section-complementaire py-14 md:py-24 bg-gradient-to-r from-gray-50 to-orange-50">
                     <div className="service-complementaire container mx-auto px-6">
-                        <div className="titre-service-complementaire text-center mb-20">
+                        <div className="titre-service-complementaire text-center mb-12 md:mb-20">
                             <h2 data-aos="zoom-in" data-aos-delay="0" className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-orange-900 bg-clip-text text-transparent mb-6">
                                 Services Complémentaires
                             </h2>
@@ -110,7 +114,7 @@ export default function Services() {
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <ServiceCard
-                                icon="🚜"
+                                icon={<ExcavatorIcon className="w-10 h-10 text-white"/>}
                                 title="Véhicules et Engins de Chantier"
                                 desc="Importation, achat et vente d'engins TP"
                                 details={[
@@ -123,7 +127,7 @@ export default function Services() {
                             />
 
                             <ServiceCard
-                                icon="📊"
+                                icon={<ChartIcon className="w-10 h-10 text-white"/>}
                                 title="Évaluation Immobilière"
                                 desc="Expertise pour fixer prix de vente/location"
                                 details={[
@@ -136,7 +140,7 @@ export default function Services() {
                             />
 
                             <ServiceCard
-                                icon="🤝"
+                                icon={<PartnershipIcon className="w-10 h-10 text-white"/>}
                                 title="Conseil et Accompagnement Immobilier"
                                 desc="Guidance stratégique pour vos investissements"
                                 details={[
@@ -152,9 +156,9 @@ export default function Services() {
                 </section>
 
                 {/* Modèle d'affaires */}
-                <section className="modele-section py-24 bg-gradient-to-br from-orange-600/10 to-orange-700/10">
+                <section className="modele-section py-14 md:py-24 bg-gradient-to-br from-orange-600/10 to-orange-700/10">
                     <div className="container mx-auto px-6">
-                        <div className="modele-top text-center mb-20">
+                        <div className="modele-top text-center mb-12 md:mb-20">
                             <div className="modele-title inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-3xl text-lg font-bold mb-8 shadow-2xl">
                                 NOTRE MODÈLE
                             </div>
@@ -166,7 +170,7 @@ export default function Services() {
                         <div className="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
                             <div className="modele-card text-center p-12 bg-white/60 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all">
                                 <div data-aos="fade-up" data-aos-delay="0" className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl">
-                                    🤝
+                                    <PartnershipIcon className="w-12 h-12 text-white"/>
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-aos="zoom-in" data-aos-delay="0">Co-entreprises Internationales</h3>
                                 <p className="text-lg text-gray-700  mx-auto " data-aos="fade-up" data-aos-delay="0">
@@ -177,7 +181,7 @@ export default function Services() {
 
                             <div className="modele-card text-center p-12 bg-white/60 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all">
                                 <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
-                                    ⚙️
+                                    <CogIcon className="w-12 h-12 text-white"/>
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-aos="zoom-in" data-aos-delay="0">Clé en Main</h3>
                                 <p className="text-lg text-gray-700  mx-auto" data-aos="fade-up" data-aos-delay="0">
@@ -188,7 +192,7 @@ export default function Services() {
 
                             <div className="modele-card text-center p-12 bg-white/60 backdrop-blur-sm rounded-3xl shadow-2xl hover:shadow-orange-500/25 transition-all">
                                 <div className="card-svg-services w-24 h-24  rounded-3xl mx-auto mb-8 flex items-center justify-center text-3xl shadow-xl" data-aos="fade-up" data-aos-delay="0">
-                                    🌱
+                                    <LeafIcon className="w-12 h-12 text-white"/>
                                 </div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4" data-aos="zoom-in" data-aos-delay="0">Durabilité & Innovation</h3>
                                 <p className="text-lg text-gray-700  mx-auto" data-aos="fade-up" data-aos-delay="0">

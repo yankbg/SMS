@@ -1,14 +1,20 @@
-@import "tailwindcss";
+/* Pas de `@import "tailwindcss"` ici : il est deja fait une fois dans
+   src/index.css. Le declarer dans les deux fichiers dupliquait integralement
+   Tailwind dans le bundle (127 ko -> 64 ko une fois dedouble). */
+
 /* Reset et styles de base*/
 /* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
+/* ATTENTION : ne pas remettre ici une regle `*{margin:0;padding:0}`.
+   Tailwind v4 place ses utilitaires dans `@layer utilities`, et une regle NON
+   layeree l'emporte sur toute regle layeree quelle que soit sa specificite.
+   Ce reset global neutralisait donc TOUS les `p-*`, `m-*`, `mx-auto`,
+   `space-y-*` du site. Le preflight de Tailwind fait deja exactement ce reset
+   (margin/padding a 0 + box-sizing), correctement layere. */
+
 body{
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -135,24 +141,35 @@ body{
 /* Hero Text */
 .hero-text {
     color: white;
-    font-size: 72px;
     font-weight: 600;
     line-height: 1.2;
     margin-bottom: 40px;
+    /* Titre et sous-titre forment un groupe : serre a l'interieur,
+       largement separe de l'appel a l'action. */
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
 }
 
 .text1 {
     margin: 0;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #101828;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.2vw, 3.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-wrap: balance;
+    max-width: 18ch;
 }
 
 .text2 {
     margin: 0;
     font-weight: 400;
-    font-size: 1.5rem;
-    color: rgb(95, 108, 123);
+    font-size: clamp(1.05rem, 1.6vw, 1.375rem);
+    line-height: 1.5;
+    /* Secondaire teinte dans le blanc du titre, jamais en gris neutre. */
+    color: rgba(255, 255, 255, 0.86);
+    max-width: 52ch;
 }
 
 /* Explore Button */
@@ -229,14 +246,36 @@ body{
     font-size: 18px;
     font-weight: 500;
 }
+/* Voile du hero : l'ancien voile blanc uniforme (rgba(255,255,255,.30)) ne
+   garantissait aucun contraste — le texte sombre passait sur un ciel clair ou
+   une benne orange selon la diapositive. Degrade sombre ancre a gauche, la ou
+   se trouve le texte, qui s'efface a droite pour laisser respirer la photo. */
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.30);
+    background: linear-gradient(
+        100deg,
+        rgba(8, 15, 30, 0.88) 0%,
+        rgba(8, 15, 30, 0.74) 38%,
+        rgba(8, 15, 30, 0.38) 64%,
+        rgba(8, 15, 30, 0.16) 100%
+    );
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    /* Sur mobile le texte occupe toute la largeur : voile vertical. */
+    .overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(8, 15, 30, 0.72) 0%,
+            rgba(8, 15, 30, 0.84) 45%,
+            rgba(8, 15, 30, 0.9) 100%
+        );
+    }
 }
 /*Objectifs*/
 .objectifs{
@@ -644,4 +683,151 @@ body{
 }
 .notfound{
     margin-bottom: 1rem;
+}
+/* ---------------------------------------------------------------------------
+   Accessibilite : mouvement reduit + filet de securite AOS
+   --------------------------------------------------------------------------- */
+
+/* AOS cache ses elements via `[data-aos]{opacity:0}` et ne les revele qu'en
+   ajoutant `.aos-animate`. Si le JS ne s'execute pas, echoue, ou si AOS est
+   desactive, le contenu resterait invisible. On force donc sa visibilite
+   partout ou aucune animation n'est prevue. */
+@media (max-width: 767px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---------------------------------------------------------------------------
+   Surfaces du navigateur et focus clavier
+   Ces elements (selection, caret, barre de defilement, anneau de focus)
+   arrivent avec les styles par defaut du navigateur et n'appartiennent a
+   aucune charte : on les rattache a la palette SMS.
+   --------------------------------------------------------------------------- */
+
+:root {
+    --sms-orange: #ea580c;
+    --sms-blue: #1e3a8a;
+    --sms-slate: #e2e8f0;
+}
+
+::selection {
+    background-color: var(--sms-orange);
+    color: #ffffff;
+}
+
+input,
+textarea,
+select {
+    caret-color: var(--sms-orange);
+}
+
+/* Anneau de focus visible uniquement au clavier : indispensable, aucun
+   element interactif du site n'en avait. */
+:focus-visible {
+    outline: 3px solid var(--sms-orange);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+html {
+    scrollbar-color: var(--sms-orange) var(--sms-slate);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--sms-slate);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--sms-orange);
+    border-radius: 999px;
+}
+
+/* Cibles tactiles : 44x44 minimum, SANS toucher a l'apparence ni au
+   `display` (le hamburger reste masque au-dessus de 1024px). */
+.hamburger,
+.hero-dot,
+.play-icon-btn {
+    cursor: pointer;
+}
+
+.hamburger {
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 0;
+}
+
+/* Le point garde ses 16px ; seule la zone cliquable passe a 44px via ::after. */
+.hero-dots {
+    gap: 28px;
+}
+
+.hero-dots .hero-dot {
+    position: relative;
+    border: 0;
+    padding: 0;
+}
+
+.hero-dots .hero-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    transform: translate(-50%, -50%);
+}
+
+.play-icon-btn {
+    background: none;
+    border: 0;
+    padding: 0;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sous 520px, `justify-content: space-between` poussait le libelle "Voir la
+   video" hors de l'ecran une fois la zone tactile du bouton portee a 44px.
+   On regroupe les controles a gauche et on autorise le retour a la ligne. */
+@media (max-width: 520px) {
+    .hero-dot-play {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1.25rem 1.25rem;
+    }
+
+    .hero-play p {
+        white-space: nowrap;
+    }
 }

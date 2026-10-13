@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
+import {BoltIcon, CameraIcon, CarIcon, ConeIcon, CraneIcon, DumpTruckIcon, ExcavatorIcon, HammerIcon, MotorcycleIcon, PickupIcon, RulerIcon, SatelliteIcon, SetSquareIcon, TruckIcon, VanIcon, WheelLoaderIcon} from "../component/Icons.jsx";
 import './style.css'
 
 export default function APropos() {
@@ -24,7 +25,7 @@ export default function APropos() {
         return (
             <div className="main-apropos min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50">
                 {/* Hero À Propos */}
-                <section className="section-hero pt-32 pb-24 bg-gradient-to-r from-blue-900 to-indigo-900 relative overflow-hidden">
+                <section className="section-hero pt-28 md:pt-32 pb-14 md:pb-24 bg-gradient-to-r from-blue-900 to-indigo-900 relative overflow-hidden">
                     {/*<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.15),transparent_50%)]"></div>*/}
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="container max-w-4xl mx-auto text-center text-white">
@@ -68,14 +69,14 @@ export default function APropos() {
                             </div>
                             <div className="relative" data-aos="fade-up" data-aos-delay="0">
                                 <div className="bg-gradient-to-br from-emerald-500/5 to-green-500/5 p-12 rounded-3xl backdrop-blur-sm border border-emerald-200/30 shadow-2xl">
-                                    <div className="grid grid-cols-2 gap-6">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                         <div className="text-center p-6 bg-white/50 rounded-2xl backdrop-blur-sm hover:bg-white/80 transition-all">
-                                            <div className="text-4xl mb-3">🏗️</div>
+                                            <CraneIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>
                                             <h4 className="font-bold text-xl mb-2">Génie Civil</h4>
                                             <p className="text-sm text-gray-600">Bâtiments & Infrastructures</p>
                                         </div>
                                         <div className="text-center p-6 bg-white/50 rounded-2xl backdrop-blur-sm hover:bg-white/80 transition-all">
-                                            <div className="text-4xl mb-3">🚚</div>
+                                            <TruckIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>
                                             <h4 className="font-bold text-xl mb-2">Logistique</h4>
                                             <p className="text-sm text-gray-600">Import-Export & Transport</p>
                                         </div>
@@ -87,16 +88,16 @@ export default function APropos() {
                 </section>
 
                 {/* Équipe & Références */}
-                <section className="reference-container py-24 bg-gradient-to-r from-gray-50 to-slate-100">
+                <section className="reference-container py-14 md:py-24 bg-gradient-to-r from-gray-50 to-slate-100">
                     <div className="container mx-auto px-6">
-                        <div className="reference-title text-center mb-20">
+                        <div className="reference-title text-center mb-12 md:mb-20">
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0" id="equipe-qualifier">Nos Forces</h2>
                             <p className="text-xl text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="0">
                                 Expertise humaine et matérielle au service de vos projets
                             </p>
                         </div>
 
-                        <div className="grid lg:grid-cols-2 gap-16 mb-20">
+                        <div className="grid lg:grid-cols-2 gap-16 mb-12 md:mb-20">
                             {/* Équipe */}
                             <div >
                                 <h3 className="text-3xl font-bold text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="0">Équipe Qualifiée</h3>
@@ -211,9 +212,9 @@ export default function APropos() {
                             </div>
                         </div>
                         {/* ÉQUIPEMENTS & MATÉRIEL */}
-                        <section className="materiel-section py-24 bg-gradient-to-r from-blue-50 via-red-50 to-blue-100" id="Engins">
+                        <section className="materiel-section py-14 md:py-24 bg-gradient-to-r from-blue-50 via-red-50 to-blue-100" id="Engins">
                             <div className="container mx-auto px-6">
-                                <div className="text-center mb-20">
+                                <div className="text-center mb-12 md:mb-20">
                                     <div className="icon-badge-Apropos inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full text-sm font-semibold w-fit mx-auto mb-8 shadow-lg">
                                         <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
@@ -229,7 +230,7 @@ export default function APropos() {
                                 </div>
 
                                 {/* ENGINS DE CHANTIER */}
-                                <div className="grid lg:grid-cols-2 gap-12 mb-20">
+                                <div className="grid lg:grid-cols-2 gap-12 mb-12 md:mb-20">
                                     <div>
                                         <h3 className="text-3xl font-bold text-gray-900 mb-8 flex items-center">
                                             <svg className="icon-title-card w-10 h-10 text-orange-600 mr-4" fill="currentColor" viewBox="0 0 20 20">
@@ -238,10 +239,10 @@ export default function APropos() {
                                             Engins de Chantier
                                         </h3>
                                         <div className="card-materiel space-y-4">
-                                            <EquipmentCard icon="🚜" title="2 Excavatrices" desc="Creusement & terrassement" />
-                                            <EquipmentCard icon="🛡️" title="1 Chargeur" desc="Manutention matériaux" />
-                                            <EquipmentCard icon="🚛" title="4 Camions" desc="Transport matériaux" />
-                                            <EquipmentCard icon="📏" title="2 Cyclomètres" desc="Mesures topographiques" />
+                                            <EquipmentCard icon={<ExcavatorIcon className="w-7 h-7 text-white"/>} title="2 Excavatrices" desc="Creusement & terrassement" />
+                                            <EquipmentCard icon={<WheelLoaderIcon className="w-7 h-7 text-white"/>} title="1 Chargeur" desc="Manutention matériaux" />
+                                            <EquipmentCard icon={<DumpTruckIcon className="w-7 h-7 text-white"/>} title="4 Camions" desc="Transport matériaux" />
+                                            <EquipmentCard icon={<RulerIcon className="w-7 h-7 text-white"/>} title="2 Cyclomètres" desc="Mesures topographiques" />
                                         </div>
                                         <div className="text-center">
                                             <button onClick={() => setShowEngins(!showEngins)} className="cta-projet01 toggle-btn px-8 py-4  text-white rounded-2xl font-bold text-lg shadow-xl hover:shadow-orange-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center mx-auto">
@@ -255,9 +256,9 @@ export default function APropos() {
                                         {/* Contenu dropdown caché - visible au clic */}
                                         <div className={`mt-6 gap-6 ${showEngins ? 'grid grid-cols-1 animate-fadeIn' : 'hidden'}`}>
 
-                                            <EquipmentCard icon="📐" title="1 Niveau automatique" desc="Nivellement précis" />
-                                            <EquipmentCard icon="🚧" title="1 Niveleuse" desc="Nivellement routes" />
-                                            <EquipmentCard icon="🔨" title="1 Compacteur" desc="Compactage sols" />
+                                            <EquipmentCard icon={<SetSquareIcon className="w-7 h-7 text-white"/>} title="1 Niveau automatique" desc="Nivellement précis" />
+                                            <EquipmentCard icon={<ConeIcon className="w-7 h-7 text-white"/>} title="1 Niveleuse" desc="Nivellement routes" />
+                                            <EquipmentCard icon={<HammerIcon className="w-7 h-7 text-white"/>} title="1 Compacteur" desc="Compactage sols" />
                                         </div>
                                     </div>
 
@@ -269,36 +270,36 @@ export default function APropos() {
                                             Matériel de Précision
                                         </h3>
                                         <div className="card-materiel space-y-4">
-                                            <EquipmentCard icon="📡" title="1 GPS Mapp 60 CX" desc="Topographie précise" />
-                                            <EquipmentCard icon="📷" title="Appareil photo Digital" desc="Documentation chantier" />
-                                            <EquipmentCard icon="📏" title="2 Décamètres électroniques" desc="Mesures laser" />
-                                            <EquipmentCard icon="⚡" title="Groupe électrogène 12 KVA" desc="Alimentation continue" />
+                                            <EquipmentCard icon={<SatelliteIcon className="w-7 h-7 text-white"/>} title="1 GPS Mapp 60 CX" desc="Topographie précise" />
+                                            <EquipmentCard icon={<CameraIcon className="w-7 h-7 text-white"/>} title="Appareil photo Digital" desc="Documentation chantier" />
+                                            <EquipmentCard icon={<RulerIcon className="w-7 h-7 text-white"/>} title="2 Décamètres électroniques" desc="Mesures laser" />
+                                            <EquipmentCard icon={<BoltIcon className="w-7 h-7 text-white"/>} title="Groupe électrogène 12 KVA" desc="Alimentation continue" />
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* MATÉRIEL ROULANT */}
-                                <div className="text-center mb-20">
+                                <div className="text-center mb-12 md:mb-20">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-8">Matériel Roulant</h3>
                                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-                                            <div className="text-4xl mb-3">🚐</div>
+                                            <VanIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>
                                             <h4 className="font-bold text-lg mb-2">1 Mini Van Toyota Noah</h4>
                                         </div>
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-                                            <div className="text-4xl mb-3">🚙</div>
+                                            <CarIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>
                                             <h4 className="font-bold text-lg mb-2">2 Pajero Mini</h4>
                                         </div>
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-                                            <div className="text-4xl mb-3">🏍️</div>
+                                            <MotorcycleIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>
                                             <h4 className="font-bold text-lg mb-2">1 Moto DT</h4>
                                         </div>
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-                                            <div className="text-4xl mb-3">🚙</div>
+                                            <CarIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>
                                             <h4 className="font-bold text-lg mb-2">1 Suzuki</h4>
                                         </div>
                                         <div className="p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all group">
-                                            <div className="text-4xl mb-3">🛻</div>  {/* Land Cruiser */}
+                                            <PickupIcon className="w-10 h-10 inline-block mb-3 text-orange-600"/>  {/* Land Cruiser */}
                                             <h4 className="font-bold text-lg mb-2">1 GX Land Cruiser Toyota</h4>
                                         </div>
                                     </div>

@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import "./style.css";
 import Navbar from "../component/Navbar.jsx";
 import Footer from "../component/Footer.jsx";
+import {HardHatIcon, ExcavatorIcon, GlobeIcon} from "../component/Icons.jsx";
 import video1 from "../assets/video1.mp4";
 import img1 from "../assets/image1.jpg";
 import img2 from "../assets/image002.jpeg";
@@ -26,13 +27,29 @@ const HeroSection = ({heroData, heroCount, setHeroCount, setPlayStatus, playStat
             </div>
             <div className="hero-dot-play">
                 <ul className="hero-dots">
-                    <li onClick={()=>setHeroCount(0)} className={heroCount === 0 ? "hero-dot green" : "hero-dot"}></li>
-                    <li onClick={()=>setHeroCount(1)} className={heroCount === 1 ? "hero-dot green" : "hero-dot"}></li>
-                    <li onClick={()=>setHeroCount(2)} className={heroCount === 2 ? "hero-dot green" : "hero-dot"}></li>
+                    {[0, 1, 2].map((i) => (
+                        <li key={i}>
+                            <button
+                                type="button"
+                                className={heroCount === i ? "hero-dot green" : "hero-dot"}
+                                aria-label={`Afficher la diapositive ${i + 1} sur 3`}
+                                aria-current={heroCount === i}
+                                onClick={() => setHeroCount(i)}
+                            />
+                        </li>
+                    ))}
                 </ul>
                 <div className="hero-play" >
-                    <img onClick={()=>setPlayStatus(!playStatus)}  src={playStatus?pause_icon:play_icon} alt="play-icon" className="play-icon"/>
-                    <p>See the video</p>
+                    <button
+                        type="button"
+                        className="play-icon-btn"
+                        aria-pressed={playStatus}
+                        aria-label={playStatus ? "Mettre la vidéo en pause" : "Lire la vidéo de présentation"}
+                        onClick={() => setPlayStatus(!playStatus)}
+                    >
+                        <img src={playStatus ? pause_icon : play_icon} alt="" className="play-icon"/>
+                    </button>
+                    <p>{playStatus ? "Pause" : "Voir la vidéo"}</p>
                 </div>
             </div>
         </div>
@@ -127,7 +144,7 @@ const Apropos = () => {
 
                 {/* Title Section */}
                 <div className="title-apropos">
-                    <div className="text-center mb-20 ">
+                    <div className="text-center mb-12 md:mb-20 ">
                         <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full text-sm font-semibold mb-6 shadow-lg ">
                             <svg className="w-5 h-5 mr-2 svg-fondee" fill="currentColor" viewBox="0 0 20 20">
                                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
@@ -146,9 +163,9 @@ const Apropos = () => {
 
                 {/* Stats */}
                 <div className="grid md:grid-cols-3 gap-10">
-                    <StatCard number="12+" label="Experts" icon="👷" color="card-svg-services" aos_delay="0"  link="a-propos#equipe-qualifier"/>
-                    <StatCard number="6+" label="Engins TP" icon="🚜" color="card-svg-services" aos_delay="150" link="a-propos#Engins"/>
-                    <StatCard number="3+" label="Co-entreprises" icon="🌍" color="card-svg-services" aos_delay="300" link="a-propos"/>
+                    <StatCard number="12+" label="Experts" icon={<HardHatIcon className="w-12 h-12 text-white"/>} color="card-svg-services" aos_delay="0"  link="a-propos#equipe-qualifier"/>
+                    <StatCard number="6+" label="Engins TP" icon={<ExcavatorIcon className="w-12 h-12 text-white"/>} color="card-svg-services" aos_delay="150" link="a-propos#Engins"/>
+                    <StatCard number="3+" label="Co-entreprises" icon={<GlobeIcon className="w-12 h-12 text-white"/>} color="card-svg-services" aos_delay="300" link="a-propos"/>
                 </div>
 
                 {/* CTA */}
@@ -201,11 +218,18 @@ const Home = () => {
     const [heroCount, setHeroCount] = useState(0);
     const [playStatus, setPlayStatus] = useState(false);
     useEffect(() => {
+        // WCAG 2.2.2 : un contenu qui defile seul doit pouvoir etre arrete.
+        // On suspend la rotation pendant la lecture video et on la desactive
+        // si l'utilisateur a demande moins d'animation. 6s au lieu de 3s :
+        // trois secondes ne suffisent pas a lire le titre et le sous-titre.
+        if (playStatus || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
         const id = setInterval(() => {
             setHeroCount((count) => (count === 2 ? 0 : count + 1));
-        }, 3000);
+        }, 6000);
         return () => clearInterval(id);
-    }, []);
+    }, [playStatus]);
 
     return (
         <div>

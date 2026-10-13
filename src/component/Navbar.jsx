@@ -4,9 +4,9 @@ import React, { useState, useEffect } from "react";
 import "../pages/style.css";
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);  // ✅ État hamburger
-    const [scrolled, setScrolled] = useState(false);  // ✅ Effet scroll
-    // ✅ Fermer menu au scroll
+    const [isOpen, setIsOpen] = useState(false);  // État hamburger
+    const [scrolled, setScrolled] = useState(false);  // Effet scroll
+    // Fermer menu au scroll
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
@@ -20,7 +20,7 @@ export default function Navbar() {
             <div className="nav-logo">
                 <img src={smsLgo}  className="nav-logo-pic" alt="SMS Logo"/>
             </div>
-            <ul className={`nav-menu ${isOpen ? 'nav-menu-open' : ''}`}>
+            <ul id="nav-menu" className={`nav-menu ${isOpen ? 'nav-menu-open' : ''}`}>
                 <li className="nav-item"><Link to="/"  onClick={() => setIsOpen(false)}>Accueil</Link></li>
                 <li className="nav-item"><Link to="/a-propos"  onClick={() => setIsOpen(false)}>À propos</Link></li>
                 <li className="nav-item"><Link to="/service"  onClick={() => setIsOpen(false)}>Nos services</Link></li>
@@ -28,11 +28,18 @@ export default function Navbar() {
 
             </ul>
             {/* Hamburger Mobile */}
-            <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+            <button
+                type="button"
+                className={`hamburger ${isOpen ? 'active' : ''}`}
+                aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+                aria-expanded={isOpen}
+                aria-controls="nav-menu"
+                onClick={() => setIsOpen(!isOpen)}
+            >
                 <span className={`bar ${isOpen ? 'bar-1' : ''}`}></span>
                 <span className={`bar ${isOpen ? 'bar-2' : ''}`}></span>
                 <span className={`bar ${isOpen ? 'bar-3' : ''}`}></span>
-            </div>
+            </button>
         </div>
     );
 }

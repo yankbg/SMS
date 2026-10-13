@@ -5,7 +5,6 @@ import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import App from './App.jsx'
 import 'aos/dist/aos.css'
-import AOS from 'aos'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
@@ -16,11 +15,3 @@ createRoot(document.getElementById('root')).render(
         </HelmetProvider>
     </StrictMode>,
 )
-AOS.init({
-    duration: 800,
-    easing: 'ease-out-cubic',
-    once: true,
-    mirror: false,
-    disable: window.innerWidth < 768,
-    offset: 120
-});
