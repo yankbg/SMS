@@ -41,11 +41,11 @@ export default function Services() {
                     <div className="hero-text-001 container mx-auto px-6 relative z-10">
                         <div className="hero-text-services max-w-4xl mx-auto text-center text-white">
 
-                            <h1 data-aos="zoom-in" data-aos-delay="0" className="text-3xl md:text-4xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6">
+                            <h1 data-aos="zoom-in" data-aos-delay="0" className="text-3xl md:text-4xl font-black text-white mb-6">
                                 Nos Services Architecture, Génie Civil et Logistique en RDC
                             </h1>
                             <p data-aos="fade-up" data-aos-delay="100" className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed">
-                                Expertise intégrée pour <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">tous vos chantiers en RDC.</span>
+                                Expertise intégrée pour <span className="font-bold text-orange-400">tous vos chantiers en RDC.</span>
                             </p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ export default function Services() {
                 <section className="section-complementaire py-14 md:py-24 bg-gradient-to-r from-gray-50 to-orange-50">
                     <div className="service-complementaire container mx-auto px-6">
                         <div className="titre-service-complementaire text-center mb-12 md:mb-20">
-                            <h2 data-aos="zoom-in" data-aos-delay="0" className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-900 to-orange-900 bg-clip-text text-transparent mb-6">
+                            <h2 data-aos="zoom-in" data-aos-delay="0" className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
                                 Services Complémentaires
                             </h2>
                             <p data-aos="fade-up" data-aos-delay="0" className="text-xl text-gray-700 max-w-2xl mx-auto">
@@ -163,7 +163,7 @@ export default function Services() {
                                 NOTRE MODÈLE
                             </div>
                             <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0">
-                                Approche <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">Intégrée & Collaborative</span>
+                                Approche <span className="text-[var(--sms-orange)]">Intégrée & Collaborative</span>
                             </h2>
                         </div>
 

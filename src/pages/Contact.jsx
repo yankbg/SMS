@@ -71,11 +71,11 @@ export default function Contact() {
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,165,0,0.2),transparent_50%)]"></div>
                     <div className="hero-div-contact container mx-auto px-6 relative z-10">
                         <div className="max-w-4xl mx-auto text-center text-white">
-                            <h1 className="text-2xl md:text-4xl font-black bg-gradient-to-r from-white to-orange-100 bg-clip-text mb-6" data-aos="zoom-in" data-aos-delay="0">
+                            <h1 className="text-2xl md:text-4xl font-black text-white mb-6" data-aos="zoom-in" data-aos-delay="0">
                                 Contact SMS SARL - Architecture, Génie Civil et Logistique RDC
                             </h1>
                             <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="0">
-                                Votre projet mérite <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-500 bg-clip-text text-transparent">l'excellence SMS SARL</span>
+                                Votre projet mérite <span className="font-bold text-orange-400">l'excellence SMS SARL</span>
                             </p>
                             <div className="hero-bottom-contact flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="100">
                                 <a href="tel:+243990410752" className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-sm px-6 sm:px-12 py-5 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-orange-500/50 hover:-translate-y-2 transition-all duration-300">
@@ -144,7 +144,7 @@ export default function Contact() {
                                 {/* Formulaire */}
                                 <div className="formulaire-title space-y-6">
                                     <h2 className="text-4xl font-black text-gray-900 mb-4 leading-tight" data-aos="zoom-in" data-aos-delay="0">
-                                        Demandez votre <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">devis gratuit</span>
+                                        Demandez votre <span className="text-[var(--sms-orange)]">devis gratuit</span>
                                     </h2>
                                     <p className="text-xl text-gray-600 mb-8" data-aos="fade-up" data-aos-delay="0">
                                         Remplissez le formulaire - Réponse sous 24h

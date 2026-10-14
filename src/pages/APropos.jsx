@@ -29,11 +29,11 @@ export default function APropos() {
                     {/*<div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.15),transparent_50%)]"></div>*/}
                     <div className="container mx-auto px-6 relative z-10">
                         <div className="container max-w-4xl mx-auto text-center text-white">
-                            <h1 className="text-5xl md:text-7xl font-black bg-gradient-to-r from-white via-blue-100 to-white/80 bg-clip-text mb-6" data-aos="zoom-in" data-aos-delay="0">
+                            <h1 className="text-5xl md:text-7xl font-black text-white mb-6" data-aos="zoom-in" data-aos-delay="0">
                                 À Propos
                             </h1>
                             <p className="text-2xl md:text-3xl font-light max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="100">
-                                Société Multi Services <span className="font-bold bg-gradient-to-r from-orange-400 via-yellow-200 to-orange-600 bg-clip-text text-transparent">SMS SARL</span>
+                                Société Multi Services <span className="font-bold text-orange-400">SMS SARL</span>
                             </p>
                             <div className="subtitle-container mt-8 flex flex-col sm:flex-row gap-6 justify-center" data-aos="fade-up" data-aos-delay="200">
                                 <div className="subtitle-apropos bg-white/20 backdrop-blur-sm px-8 py-4 rounded-2xl text-lg font-semibold">
@@ -60,7 +60,7 @@ export default function APropos() {
                                 </div>
                                 <h1 className="text-4xl md:text-5xl font-black text-gray-900 max-w-lg leading-tight" data-aos="zoom-in" data-aos-delay="0">
                                     Contribuer à la reconstruction<br/>
-                                    <span className="bg-gradient-to-r from-orange-400 via-orange-300 to-orange-600 bg-clip-text text-transparent">de notre cher pays</span>
+                                    <span className="text-[var(--sms-orange)]">de notre cher pays</span>
                                 </h1>
                                 <p className="text-xl text-gray-600 max-w-xl leading-relaxed" data-aos="fade-up" data-aos-delay="0">
                                     Avec un profond désir de participer à la reconstruction de la RDC, SMS SARL offre des services d'excellence
@@ -99,7 +99,7 @@ export default function APropos() {
 
                         <div className="grid lg:grid-cols-2 gap-16 mb-12 md:mb-20">
                             {/* Équipe */}
-                            <div >
+                            <div className="min-w-0">
                                 <h3 className="text-3xl font-bold text-gray-900 mb-8" data-aos="fade-up" data-aos-delay="0">Équipe Qualifiée</h3>
                                 <div className="equipe-container space-y-6">
                                     <div
@@ -167,7 +167,7 @@ export default function APropos() {
                             </div>
 
                             {/* Références Admin */}
-                            <div>
+                            <div className="min-w-0">
                                 <h3 className="text-3xl font-bold text-gray-900 mb-8">Références Officielles</h3>
                                 <div className="reference-apropos space-y-4">
                                     <div data-aos="fade-up" data-aos-delay="0"
@@ -221,7 +221,7 @@ export default function APropos() {
                                         </svg>
                                         POTENTIEL MATÉRIEL
                                     </div>
-                                    <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-r from-gray-500 to-gray-950 bg-clip-text text-transparent mb-6" data-aos="zoom-in" data-aos-delay="0">
+                                    <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0">
                                         Nos Équipements Modernes
                                     </h2>
                                     <p className="text-xl text-gray-700 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="0">

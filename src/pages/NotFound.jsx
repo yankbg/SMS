@@ -21,12 +21,12 @@ export default function NotFound() {
             <div className="relative z-10 max-w-md mx-auto">
                 {/* Icon + Title */}
                 <div className="mb-8">
-                    <div className="w-24 h-24 bg-gradient-to-r from-red-500 to-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                    <div className="w-24 h-24 bg-red-500 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-2xl">
                         <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-red-600 to-red-600 bg-clip-text text-transparent mb-4">
+                    <h1 className="text-5xl md:text-6xl font-black text-red-600 mb-4">
                         404
                     </h1>
                     <p className="text-xl md:text-2xl font-bold text-gray-800 mb-2">Page non trouvée</p>
@@ -35,9 +35,10 @@ export default function NotFound() {
 
                 {/* Primary Action Buttons - Large & Prominent */}
                 <div className="space-y-4 mb-12">
+                    {/* Aplat bleu : sur l'ancien degrade, le blanc ne tenait que 2,6:1 cote blue-400. */}
                     <Link
                         to="/"
-                        className="notfound block w-full max-w-sm mx-auto bg-gradient-to-r from-blue-400 to-blue-800 hover:from-orange-600 hover:to-red-600 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2"
+                        className="notfound block w-full max-w-sm mx-auto bg-blue-800 hover:bg-blue-900 text-white font-bold py-4 px-8 rounded-2xl text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-200 flex items-center justify-center gap-2"
                     >
                         <HomeIcon className="w-6 h-6"/>
                         Accueil
@@ -55,10 +56,10 @@ export default function NotFound() {
                 <div className="space-y-6">
 
                     <div className="flex flex-wrap gap-4 justify-center text-sm text-gray-600">
-                        <Link to="/" className="hover:text-orange-500 transition-colors">Accueil</Link>
-                        <Link to="/service" className="hover:text-orange-500 transition-colors">Services</Link>
-                        <Link to="/contact" className="hover:text-orange-500 transition-colors">Contact</Link>
-                        <Link to="/a-propos" className="hover:text-orange-500 transition-colors">À propos</Link>
+                        <Link to="/" className="inline-block py-3 px-2 hover:text-orange-500 transition-colors">Accueil</Link>
+                        <Link to="/service" className="inline-block py-3 px-2 hover:text-orange-500 transition-colors">Services</Link>
+                        <Link to="/contact" className="inline-block py-3 px-2 hover:text-orange-500 transition-colors">Contact</Link>
+                        <Link to="/a-propos" className="inline-block py-3 px-2 hover:text-orange-500 transition-colors">À propos</Link>
                     </div>
                 </div>
             </div>

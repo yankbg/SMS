@@ -337,8 +337,10 @@ body{
     padding: 0 1rem;
 }
 .cta-apropos{
-    margin: 2rem;
-    width: 100%;
+    /* margin: 2rem + width: 100% = 100vw + 4rem : le bloc debordait de 8px a
+       toutes les largeurs sous 1200px et rognait la pastille a droite. */
+    margin: 2rem 0;
+    width: auto;
 }
 .cta-apropos a {
     padding: 1rem;
@@ -433,10 +435,17 @@ body{
 
     .nav-item {
         font-size: 1.2rem;
-        padding: 1rem 0;
+        /* Padding deplace sur le <a> : sur le <li> il creait une rangee de 61px
+           dont seuls 21px (le texte) etaient cliquables. */
+        padding: 0;
         border-bottom: 1px solid rgba(0,0,0,0.05);
         opacity: 0;
         transform: translateX(20px);
+    }
+
+    .nav-menu .nav-item a {
+        display: block;
+        padding: 1rem 5%;
     }
 
     .nav-menu-open .nav-item {
@@ -540,6 +549,9 @@ body{
 }
 .reference-item {
     padding: 0.2rem 1rem;
+    /* Les numeros d'agrement (N 443/8/570/B/PMEA/...) imposaient une largeur
+       minimale de 370px a toute la page. */
+    overflow-wrap: anywhere;
 }
 .border-color-logo{
     border-color: #0403fb;
@@ -554,7 +566,8 @@ body{
 }
 .materiel-section{
     margin-top: 2rem;
-    padding: 1rem;
+    /* Padding lateral retire : le conteneur parent a deja px-6. */
+    padding: 1rem 0;
 }
 .card-materiel{
     display: flex;
@@ -562,10 +575,24 @@ body{
     gap: 1rem;
 }
 .materiel-section h3, .materiel-section h2,.reference-title h2, .reference-title p{
-    margin: 1rem;
+    /* Idem : marge laterale supprimee, elle coupait "Nos Equipements Modernes". */
+    margin: 1rem 0;
+    overflow-wrap: break-word;
 }
+/* Les gros titres de section sont en text-4xl fixe : sous 420px "Complementaires"
+   et "Equipements" sont plus larges que la colonne, et overflow-wrap finissait
+   par couper le mot en deux. Taille fluide : le mot rentre sans cesure. */
+@media (max-width: 480px) {
+    .titre-service-complementaire h2,
+    .materiel-section h2 {
+        font-size: clamp(1.5rem, 7.5vw, 2.25rem);
+        line-height: 1.15;
+    }
+}
+
 .cta-projet01{
-    padding: 0 1rem;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
     margin: 1.5rem;
     background-color: rgb(246, 126, 34);
 }
@@ -599,7 +626,11 @@ body{
     padding: 1rem;
 }
 .titre-service-complementaire{
-    margin: 2rem;
+    /* Marge laterale retiree : le wrapper .container mx-auto px-6 fournit deja
+       la gouttiere. Avec 2rem de chaque cote, "Complementaires" depassait sa
+       boite et poussait la page a 374px sur un ecran de 320px. */
+    margin: 2rem 0;
+    overflow-wrap: break-word;
 }
 .titre-service-complementaire p{
     margin-top: 0.5rem;
@@ -645,7 +676,10 @@ body{
     color: #0403fb;
 }
 .hero-bottom-contact a{
-    padding: 0 1rem;
+    padding: 0.75rem 1rem;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
 }
 .contact-card{
     padding: 1.5rem;
@@ -670,7 +704,10 @@ body{
     margin-top: 1rem;
 }
 .input-contact, .select-contact,.textarea-contact{
-    padding: 0.2rem 0.5rem;
+    /* 0.2rem ecrasait le p-4 de Tailwind (meme specificite, gagnant par ordre
+       source) et laissait des champs de 33 a 38px de haut. */
+    padding: 0.75rem 1rem;
+    min-height: 44px;
 }
 .envoyezbtn{
     padding: 0.5rem 1rem;

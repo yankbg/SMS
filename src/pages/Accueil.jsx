@@ -118,7 +118,7 @@ const StatCard = ({ number, label, icon, color, aos_delay, link}) => (
 
         {/* Main Number */}
         <div className="text-center">
-            <div className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-4 pt-14 group-hover:scale-105 transition-transform duration-300">
+            <div className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-4 pt-14 group-hover:scale-105 transition-transform duration-300">
                 {number}
             </div>
             <div className="text-lg md:text-xl font-semibold text-gray-700 tracking-wide">
@@ -151,7 +151,7 @@ const Apropos = () => {
                             </svg>
                             <span className="title-fondee">FONDÉE EN 2023</span>
                         </div>
-                        <h2 className="text-5xl md:text-6xl font-black bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-6" data-aos="zoom-in" data-aos-delay="0">
+                        <h2 className="text-5xl md:text-6xl leading-tight font-black text-gray-900 mb-6" data-aos="zoom-in" data-aos-delay="0">
                             Depuis 2023 à Goma
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-700 max-w-2.5xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="0">
